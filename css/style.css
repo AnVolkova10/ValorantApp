@@ -10,8 +10,9 @@ body {
     display: flex;
     flex-direction: column;
     background-color: black;
-
 }
+
+
 /* PICK */
 aside {
     background-color: #511281;
@@ -29,6 +30,21 @@ aside section {
     height: 45px;
 }
 
+[for="player1"] {
+    background-color: blue;
+}
+[for="player2"] {
+    background-color: red;
+}
+[for="player3"] {
+    background-color: green;
+}
+[for="player4"] {
+    background-color: yellow;
+}
+[for="player5"] {
+    background-color: pink;
+}
 .astra {
     background-image: url(../img/astra.png);
     background-position: 100px;
@@ -125,6 +141,8 @@ main {
 
 main section {
     height: 30px;
+    display: flex;
+    flex-direction: row-reverse;
     
 }
 
