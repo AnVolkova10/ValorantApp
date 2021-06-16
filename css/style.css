@@ -165,6 +165,7 @@ main section {
     display: inline;
     flex-direction: row-reverse;
     
+    
 }
 
 div {
@@ -181,20 +182,30 @@ p {
 
 .abilities {
     display: grid;
-    grid-template-columns:  1fr 1fr 1fr;
+    grid-template-columns:  2fr 1fr 2fr;
     
 }
 
 .smokeE, .screenE, .flashE, .blindE, .obstacleE, .slowE, .dazeE, .healE, .healSelfE, .trackE, .revealE, .dmgExplE, .dmgAreaE, .teleportE, .movabilityE, .rapidFireE {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+.smoke, .screen, .flash, .blind, .obstacle, .slow, .daze, .heal, .healSelf, .track, .reveal, .dmgExpl, .dmgArea, .teleport, .movability, .rapidFire {
+    display: flex;
+    justify-content: flex-start;
 }
 
 @media screen and (max-width: 640px) {
 
     nav {
-     flex-direction: column;
+        flex-direction: column;
         
+    }
+
+    div {
+        height: 5px;
+        width: 5px;
     }
 }
     
