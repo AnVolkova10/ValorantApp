@@ -14,9 +14,15 @@ body {
 
 
 /* PICK */
+
+nav {
+    display: flex;
+    
+}
 aside {
-    background-color: #511281;
+    background-color: #3b3b3b;
     height:50vh;
+    width: 100vh;
     color: white;
 }
 
@@ -26,7 +32,7 @@ form {
 }
 
 aside section {
-    border: solid #21094e;
+    border: solid #646464;
     height: 45px;
 }
 
@@ -44,6 +50,21 @@ aside section {
 }
 [for="player5"] {
     background-color: pink;
+}
+[for="player6"] {
+    background-color: lightblue;
+}
+[for="player7"] {
+    background-color: lightcoral;
+}
+[for="player8"] {
+    background-color: lightgreen;
+}
+[for="player9"] {
+    background-color: lightgoldenrodyellow;
+}
+[for="player10"] {
+    background-color: lightpink;
 }
 .astra {
     background-image: url(../img/astra.png);
@@ -134,27 +155,40 @@ aside section {
 main {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    background-color:#a5e1ad;
+    align-items: center;
+    background-color:#ffffff;
     height: 50vh;
 }
 
 main section {
     height: 30px;
-    display: flex;
+    display: inline;
     flex-direction: row-reverse;
     
 }
 
 div {
     display:inline-block;
-    background-color:#4ca1a3;
     height: 15px;
     width: 15px;
-    border-right: solid 1px;
+    border-right: solid 0.1px;
+    
+}
+p {
+    display: inline;
+    text-align: center;
+}
+
+.abilities {
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr;
     
 }
 
+.smokeE, .screenE, .flashE, .blindE, .obstacleE, .slowE, .dazeE, .healE, .healSelfE, .trackE, .revealE, .dmgExplE, .dmgAreaE, .teleportE, .movabilityE, .rapidFireE {
+    display: flex;
+    flex-direction: row-reverse;
+}
 
 
 

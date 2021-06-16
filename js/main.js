@@ -1,7 +1,7 @@
 window.onload = () => {
     
     
-    //Abilities
+    //Allied Abilities
     let smoke = document.querySelector(".smoke");
     let screen = document.querySelector(".screen");
     let flash = document.querySelector(".flash");
@@ -18,6 +18,24 @@ window.onload = () => {
     let teleport = document.querySelector(".teleport");
     let movability = document.querySelector(".movability");
     let rapidFire = document.querySelector(".rapidFire");
+
+    // Enemy Abilities
+    let smokeE = document.querySelector(".smokeE");
+    let screenE = document.querySelector(".screenE");
+    let flashE = document.querySelector(".flashE");
+    let blindE = document.querySelector(".blindE");
+    let obstacleE = document.querySelector(".obstacleE");
+    let slowE = document.querySelector(".slowE");
+    let dazeE = document.querySelector(".dazeE");
+    let healE = document.querySelector(".healE");
+    let healSelfE = document.querySelector(".healSelfE");
+    let trackE = document.querySelector(".trackE");
+    let revealE = document.querySelector(".revealE");
+    let dmgExplE = document.querySelector(".dmgExplE");
+    let dmgAreaE = document.querySelector(".dmgAreaE");
+    let teleportE = document.querySelector(".teleportE");
+    let movabilityE = document.querySelector(".movabilityE");
+    let rapidFireE = document.querySelector(".rapidFireE");
 
     // Adding Points
     function addPointP1 (ability) {
@@ -49,6 +67,36 @@ window.onload = () => {
         ability.appendChild(point);
         point.style.backgroundColor = "pink";
         point.className = "pink";
+    }
+    function addPointP6 (ability) {
+        let point = document.createElement("div");
+        ability.appendChild(point);
+        point.style.backgroundColor = "lightblue";
+        point.className = "lightblue";
+    }
+    function addPointP7 (ability) {
+        let point = document.createElement("div");
+        ability.appendChild(point);
+        point.style.backgroundColor = "lightcoral";
+        point.className = "lightcoral";
+    }
+    function addPointP8 (ability) {
+        let point = document.createElement("div");
+        ability.appendChild(point);
+        point.style.backgroundColor = "lightgreen";
+        point.className = "lightgreen";
+    }
+    function addPointP9 (ability) {
+        let point = document.createElement("div");
+        ability.appendChild(point);
+        point.style.backgroundColor = "khaki";
+        point.className = "khaki";
+    }
+    function addPointP10 (ability) {
+        let point = document.createElement("div");
+        ability.appendChild(point);
+        point.style.backgroundColor = "lightpink";
+        point.className = "lightpink";
     }
 
     //Player pick an Agent, adds certain points to abilities
@@ -1298,6 +1346,1256 @@ window.onload = () => {
         }
 
         console.log(option5);
+
+        
+    });
+
+    let agent6 = document.querySelector("#agent6");
+    let player6 = document.querySelector("#player6");
+    player6.addEventListener('change', function() {
+        let option6 = this.options[this.selectedIndex].value;
+        
+        if (option6 === "astra") {
+            agent6.className = '';
+            agent6.classList.add("astra");
+
+            document.querySelectorAll(".lightblue").forEach(el => el.remove());
+
+            addPointP6(smokeE);
+            addPointP6(smokeE);
+            addPointP6(smokeE);
+            addPointP6(smokeE);
+            addPointP6(smokeE);
+            addPointP6(obstacleE);
+            addPointP6(dazeE);
+            addPointP6(dmgExplE);
+               
+        } else if (option6 === "breach") {
+            agent6.className = '';
+            agent6.classList.add("breach");
+
+            document.querySelectorAll(".lightblue").forEach(el => el.remove());
+
+            addPointP6(flashE);
+            addPointP6(flashE);
+            addPointP6(flashE);
+            addPointP6(dazeE);
+            addPointP6(dazeE);
+            addPointP6(dazeE);
+            addPointP6(dazeE);
+            addPointP6(dmgExplE);
+            addPointP6(dmgExplE);
+            
+        }else if (option6 === "brimstone") {
+            agent6.className = '';
+            agent6.classList.add("brimstone");
+            
+            document.querySelectorAll(".lightblue").forEach(el => el.remove());
+
+            addPointP6(smokeE);
+            addPointP6(smokeE);
+            addPointP6(smokeE);
+            addPointP6(dmgExplE);
+            addPointP6(dmgExplE);
+            addPointP6(dmgExplE);
+            addPointP6(dmgAreaE);
+            addPointP6(dmgAreaE);
+            addPointP6(dmgAreaE);
+            addPointP6(rapidFireE);
+            addPointP6(rapidFireE);
+            
+        }else if (option6 === "cypher") {
+            agent6.className = '';
+            agent6.classList.add("cypher");
+
+            document.querySelectorAll(".lightblue").forEach(el => el.remove());
+
+            addPointP6(smokeE);
+            addPointP6(obstacleE);
+            addPointP6(obstacleE);
+            addPointP6(obstacleE);
+            addPointP6(slowE);
+            addPointP6(slowE);
+            addPointP6(dazeE);
+            addPointP6(trackE);
+            addPointP6(trackE);
+            addPointP6(revealE);
+            addPointP6(revealE);
+            addPointP6(revealE);
+
+        }else if (option6 === "jett") {
+            agent6.className = '';
+            agent6.classList.add("jett");
+
+            document.querySelectorAll(".lightblue").forEach(el => el.remove());
+
+            addPointP6(smokeE);
+            addPointP6(dmgExplE);
+            addPointP6(dmgExplE);
+            addPointP6(movabilityE);
+            addPointP6(movabilityE);
+            addPointP6(movabilityE);
+            addPointP6(movabilityE);
+
+        }else if (option6 === "killjoy") {
+            agent6.className = '';
+            agent6.classList.add("killjoy");
+
+            document.querySelectorAll(".lightblue").forEach(el => el.remove());
+
+            addPointP6(obstacleE);
+            addPointP6(obstacleE);
+            addPointP6(obstacleE);
+            addPointP6(slowE);
+            addPointP6(trackE);
+            addPointP6(trackE);
+            addPointP6(dmgExplE);
+            addPointP6(dmgAreaE);
+            addPointP6(dmgAreaE);
+            addPointP6(dmgAreaE);
+            addPointP6(dmgAreaE);
+
+        }else if (option6 === "omen") {
+            agent6.className = '';
+            agent6.classList.add("omen");
+
+            document.querySelectorAll(".lightblue").forEach(el => el.remove());
+
+            addPointP6(smokeE);
+            addPointP6(smokeE);
+            addPointP6(blindE);
+            addPointP6(trackE);
+            addPointP6(teleportE);
+            addPointP6(teleportE);
+            addPointP6(movabilityE);
+            addPointP6(movabilityE);
+
+        }else if (option6 === "phoenix") {
+            agent6.className = '';
+            agent6.classList.add("phoenix");
+
+            document.querySelectorAll(".lightblue").forEach(el => el.remove());
+
+            addPointP6(screenEE);
+            addPointP6(flashE);
+            addPointP6(flashE);
+            addPointP6(healSelfE);
+            addPointP6(healSelfE);
+            addPointP6(healSelfE);
+            addPointP6(dmgAreaE);
+            addPointP6(dmgAreaE);
+            addPointP6(dmgAreaE);
+            addPointP6(movabilityE);
+
+        }else if (option6 === "raze") {
+            agent6.className = '';
+            agent6.classList.add("raze");
+
+            document.querySelectorAll(".lightblue").forEach(el => el.remove());
+
+            addPointP6(obstacleE);
+            addPointP6(dmgExplE);
+            addPointP6(dmgExplE);
+            addPointP6(dmgExplE);
+            addPointP6(dmgExplE);
+            addPointP6(movabilityE);
+            addPointP6(movabilityE);
+            
+        }else if (option6 === "reyna") {
+            agent6.className = '';
+            agent6.classList.add("reyna");
+
+            document.querySelectorAll(".lightblue").forEach(el => el.remove());
+
+            addPointP6(blindE);
+            addPointP6(blindE);
+            addPointP6(healSelfE);
+            addPointP6(healSelfE);
+            addPointP6(healSelfE);
+            addPointP6(rapidFireE);
+            addPointP6(rapidFireE);
+            addPointP6(movabilityE);
+
+        }else if (option6 === "sage") {
+            agent6.className = '';
+            agent6.classList.add("sage");
+
+            document.querySelectorAll(".lightblue").forEach(el => el.remove());
+
+            addPointP6(obstacleE);
+            addPointP6(obstacleE);
+            addPointP6(obstacleE);
+            addPointP6(slowE);
+            addPointP6(slowE);
+            addPointP6(healE);
+            addPointP6(healE);
+            addPointP6(healSelfE);
+
+        }else if (option6 === "skye") {
+            agent6.className = '';
+            agent6.classList.add("skye");
+
+            document.querySelectorAll(".lightblue").forEach(el => el.remove());
+
+            addPointP6(flashE);
+            addPointP6(flashE);
+            addPointP6(flashE);
+            addPointP6(blindE);
+            addPointP6(blindE);
+            addPointP6(blindE);
+            addPointP6(healE);
+            addPointP6(healE);
+            addPointP6(dazeE);
+            addPointP6(trackE);
+            addPointP6(trackE);
+            addPointP6(trackE);
+
+        }else if (option6 === "sova") {
+            agent6.className = '';
+            agent6.classList.add("sova");
+
+            document.querySelectorAll(".lightblue").forEach(el => el.remove());
+
+            addPointP6(trackE);
+            addPointP6(revealE);
+            addPointP6(revealE);
+            addPointP6(revealE);
+            addPointP6(dmgExplE);
+            addPointP6(dmgExplE);
+            addPointP6(dmgExplE);
+
+        }else if (option6 === "viper") {
+            agent6.className = '';
+            agent6.classList.add("viper");
+
+            document.querySelectorAll(".lightblue").forEach(el => el.remove());
+
+            addPointP6(smokeE);
+            addPointP6(smokeE);
+            addPointP6(smokeE);
+            addPointP6(screenE);
+            addPointP6(obstacleE);
+            addPointP6(dmgExplE);
+            addPointP6(dmgAreaE);
+            addPointP6(dmgAreaE);
+            addPointP6(dmgAreaE);
+
+        }else if (option6 === "yoru") {
+            agent6.className = '';
+            agent6.classList.add("yoru");
+
+            document.querySelectorAll(".lightblue").forEach(el => el.remove());
+
+            addPointP6(flashE);
+            addPointP6(flashE);
+            addPointP6(trackE);
+            addPointP6(trackE);
+            addPointP6(teleportE);
+            addPointP6(teleportE);
+            addPointP6(movabilityE);
+            addPointP6(movabilityE);
+        }
+
+        console.log(option6);
+
+
+        
+    });
+    
+    let agent7 = document.querySelector("#agent7");
+    let player7 = document.querySelector("#player7");
+    player7.addEventListener('change', function() {
+        let option7 = this.options[this.selectedIndex].value;
+        
+        if (option7 === "astra") {
+            agent7.className = '';
+            agent7.classList.add("astra");
+
+            document.querySelectorAll(".lightcoral").forEach(el => el.remove());
+
+            addPointP7(smokeE);
+            addPointP7(smokeE);
+            addPointP7(smokeE);
+            addPointP7(smokeE);
+            addPointP7(smokeE);
+            addPointP7(obstacleE);
+            addPointP7(dazeE);
+            addPointP7(dmgExplE);
+               
+        } else if (option7 === "breach") {
+            agent7.className = '';
+            agent7.classList.add("breach");
+
+            document.querySelectorAll(".lightcoral").forEach(el => el.remove());
+
+            addPointP7(flashE);
+            addPointP7(flashE);
+            addPointP7(flashE);
+            addPointP7(dazeE);
+            addPointP7(dazeE);
+            addPointP7(dazeE);
+            addPointP7(dazeE);
+            addPointP7(dmgExplE);
+            addPointP7(dmgExplE);
+            
+        }else if (option7 === "brimstone") {
+            agent7.className = '';
+            agent7.classList.add("brimstone");
+            
+            document.querySelectorAll(".lightcoral").forEach(el => el.remove());
+
+            addPointP7(smokeE);
+            addPointP7(smokeE);
+            addPointP7(smokeE);
+            addPointP7(dmgExplE);
+            addPointP7(dmgExplE);
+            addPointP7(dmgExplE);
+            addPointP7(dmgAreaE);
+            addPointP7(dmgAreaE);
+            addPointP7(dmgAreaE);
+            addPointP7(rapidFireE);
+            addPointP7(rapidFireE);
+            
+        }else if (option7 === "cypher") {
+            agent7.className = '';
+            agent7.classList.add("cypher");
+
+            document.querySelectorAll(".lightcoral").forEach(el => el.remove());
+
+            addPointP7(smokeE);
+            addPointP7(obstacleE);
+            addPointP7(obstacleE);
+            addPointP7(obstacleE);
+            addPointP7(slowE);
+            addPointP7(slowE);
+            addPointP7(dazeE);
+            addPointP7(trackE);
+            addPointP7(trackE);
+            addPointP7(revealE);
+            addPointP7(revealE);
+            addPointP7(revealE);
+
+        }else if (option7 === "jett") {
+            agent7.className = '';
+            agent7.classList.add("jett");
+
+            document.querySelectorAll(".lightcoral").forEach(el => el.remove());
+
+            addPointP7(smokeE);
+            addPointP7(dmgExplE);
+            addPointP7(dmgExplE);
+            addPointP7(movabilityE);
+            addPointP7(movabilityE);
+            addPointP7(movabilityE);
+            addPointP7(movabilityE);
+
+        }else if (option7 === "killjoy") {
+            agent7.className = '';
+            agent7.classList.add("killjoy");
+
+            document.querySelectorAll(".lightcoral").forEach(el => el.remove());
+
+            addPointP7(obstacleE);
+            addPointP7(obstacleE);
+            addPointP7(obstacleE);
+            addPointP7(slowE);
+            addPointP7(trackE);
+            addPointP7(trackE);
+            addPointP7(dmgExplE);
+            addPointP7(dmgAreaE);
+            addPointP7(dmgAreaE);
+            addPointP7(dmgAreaE);
+            addPointP7(dmgAreaE);
+
+        }else if (option7 === "omen") {
+            agent7.className = '';
+            agent7.classList.add("omen");
+
+            document.querySelectorAll(".lightcoral").forEach(el => el.remove());
+
+            addPointP7(smokeE);
+            addPointP7(smokeE);
+            addPointP7(blindE);
+            addPointP7(trackE);
+            addPointP7(teleportE);
+            addPointP7(teleportE);
+            addPointP7(movabilityE);
+            addPointP7(movabilityE);
+
+        }else if (option7 === "phoenix") {
+            agent7.className = '';
+            agent7.classList.add("phoenix");
+
+            document.querySelectorAll(".lightcoral").forEach(el => el.remove());
+
+            addPointP7(screenE);
+            addPointP7(flashE);
+            addPointP7(flashE);
+            addPointP7(healSelfE);
+            addPointP7(healSelfE);
+            addPointP7(healSelfE);
+            addPointP7(dmgAreaE);
+            addPointP7(dmgAreaE);
+            addPointP7(dmgAreaE);
+            addPointP7(movabilityE);
+
+        }else if (option7 === "raze") {
+            agent7.className = '';
+            agent7.classList.add("raze");
+
+            document.querySelectorAll(".lightcoral").forEach(el => el.remove());
+
+            addPointP7(obstacleE);
+            addPointP7(dmgExplE);
+            addPointP7(dmgExplE);
+            addPointP7(dmgExplE);
+            addPointP7(dmgExplE);
+            addPointP7(movabilityE);
+            addPointP7(movabilityE);
+            
+        }else if (option7 === "reyna") {
+            agent7.className = '';
+            agent7.classList.add("reyna");
+
+            document.querySelectorAll(".lightcoral").forEach(el => el.remove());
+
+            addPointP7(blindE);
+            addPointP7(blindE);
+            addPointP7(healSelfE);
+            addPointP7(healSelfE);
+            addPointP7(healSelfE);
+            addPointP7(rapidFireE);
+            addPointP7(rapidFireE);
+            addPointP7(movabilityE);
+
+        }else if (option7 === "sage") {
+            agent7.className = '';
+            agent7.classList.add("sage");
+
+            document.querySelectorAll(".lightcoral").forEach(el => el.remove());
+
+            addPointP7(obstacleE);
+            addPointP7(obstacleE);
+            addPointP7(obstacleE);
+            addPointP7(slowE);
+            addPointP7(slowE);
+            addPointP7(healE);
+            addPointP7(healE);
+            addPointP7(healSelfE);
+
+        }else if (option7 === "skye") {
+            agent7.className = '';
+            agent7.classList.add("skye");
+
+            document.querySelectorAll(".lightcoral").forEach(el => el.remove());
+
+            addPointP7(flashE);
+            addPointP7(flashE);
+            addPointP7(flashE);
+            addPointP7(blindE);
+            addPointP7(blindE);
+            addPointP7(blindE);
+            addPointP7(healE);
+            addPointP7(healE);
+            addPointP7(dazeE);
+            addPointP7(trackE);
+            addPointP7(trackE);
+            addPointP7(trackE);
+
+        }else if (option7 === "sova") {
+            agent7.className = '';
+            agent7.classList.add("sova");
+
+            document.querySelectorAll(".lightcoral").forEach(el => el.remove());
+
+            addPointP7(trackE);
+            addPointP7(revealE);
+            addPointP7(revealE);
+            addPointP7(revealE);
+            addPointP7(dmgExplE);
+            addPointP7(dmgExplE);
+            addPointP7(dmgExplE);
+
+        }else if (option7 === "viper") {
+            agent7.className = '';
+            agent7.classList.add("viper");
+
+            document.querySelectorAll(".lightcoral").forEach(el => el.remove());
+
+            addPointP7(smokeE);
+            addPointP7(smokeE);
+            addPointP7(smokeE);
+            addPointP7(screenE);
+            addPointP7(obstacleE);
+            addPointP7(dmgExplE);
+            addPointP7(dmgAreaE);
+            addPointP7(dmgAreaE);
+            addPointP7(dmgAreaE);
+
+        }else if (option7 === "yoru") {
+            agent7.className = '';
+            agent7.classList.add("yoru");
+
+            document.querySelectorAll(".lightcoral").forEach(el => el.remove());
+
+            addPointP7(flashE);
+            addPointP7(flashE);
+            addPointP7(trackE);
+            addPointP7(trackE);
+            addPointP7(teleportE);
+            addPointP7(teleportE);
+            addPointP7(movabilityE);
+            addPointP7(movabilityE);
+        }
+
+        console.log(option7);
+    });
+ 
+    let agent8 = document.querySelector("#agent8");
+    let player8 = document.querySelector("#player8");
+    player8.addEventListener('change', function() {
+        let option8 = this.options[this.selectedIndex].value;
+        
+        if (option8 === "astra") {
+            agent8.className = '';
+            agent8.classList.add("astra");
+
+            document.querySelectorAll(".lightgreen").forEach(el => el.remove());
+
+            addPointP8(smokeE);
+            addPointP8(smokeE);
+            addPointP8(smokeE);
+            addPointP8(smokeE);
+            addPointP8(smokeE);
+            addPointP8(obstacleE);
+            addPointP8(dazeE);
+            addPointP8(dmgExplE);
+               
+        } else if (option8 === "breach") {
+            agent8.className = '';
+            agent8.classList.add("breach");
+
+            document.querySelectorAll(".lightgreen").forEach(el => el.remove());
+
+            addPointP8(flashE);
+            addPointP8(flashE);
+            addPointP8(flashE);
+            addPointP8(dazeE);
+            addPointP8(dazeE);
+            addPointP8(dazeE);
+            addPointP8(dazeE);
+            addPointP8(dmgExplE);
+            addPointP8(dmgExplE);
+            
+        }else if (option8 === "brimstone") {
+            agent8.className = '';
+            agent8.classList.add("brimstone");
+            
+            document.querySelectorAll(".lightgreen").forEach(el => el.remove());
+
+            addPointP8(smokeE);
+            addPointP8(smokeE);
+            addPointP8(smokeE);
+            addPointP8(dmgExplE);
+            addPointP8(dmgExplE);
+            addPointP8(dmgExplE);
+            addPointP8(dmgAreaE);
+            addPointP8(dmgAreaE);
+            addPointP8(dmgAreaE);
+            addPointP8(rapidFireE);
+            addPointP8(rapidFireE);
+            
+        }else if (option8 === "cypher") {
+            agent8.className = '';
+            agent8.classList.add("cypher");
+
+            document.querySelectorAll(".lightgreen").forEach(el => el.remove());
+
+            addPointP8(smokeE);
+            addPointP8(obstacleE);
+            addPointP8(obstacleE);
+            addPointP8(obstacleE);
+            addPointP8(slowE);
+            addPointP8(slowE);
+            addPointP8(dazeE);
+            addPointP8(trackE);
+            addPointP8(trackE);
+            addPointP8(revealE);
+            addPointP8(revealE);
+            addPointP8(revealE);
+
+        }else if (option8 === "jett") {
+            agent8.className = '';
+            agent8.classList.add("jett");
+
+            document.querySelectorAll(".lightgreen").forEach(el => el.remove());
+
+            addPointP8(smokeE);
+            addPointP8(dmgExplE);
+            addPointP8(dmgExplE);
+            addPointP8(movabilityE);
+            addPointP8(movabilityE);
+            addPointP8(movabilityE);
+            addPointP8(movabilityE);
+
+        }else if (option8 === "killjoy") {
+            agent8.className = '';
+            agent8.classList.add("killjoy");
+
+            document.querySelectorAll(".lightgreen").forEach(el => el.remove());
+
+            addPointP8(obstacleE);
+            addPointP8(obstacleE);
+            addPointP8(obstacleE);
+            addPointP8(slowE);
+            addPointP8(trackE);
+            addPointP8(trackE);
+            addPointP8(dmgExplE);
+            addPointP8(dmgAreaE);
+            addPointP8(dmgAreaE);
+            addPointP8(dmgAreaE);
+            addPointP8(dmgAreaE);
+
+        }else if (option8 === "omen") {
+            agent8.className = '';
+            agent8.classList.add("omen");
+
+            document.querySelectorAll(".lightgreen").forEach(el => el.remove());
+
+            addPointP8(smokeE);
+            addPointP8(smokeE);
+            addPointP8(blindE);
+            addPointP8(trackE);
+            addPointP8(teleportE);
+            addPointP8(teleportE);
+            addPointP8(movabilityE);
+            addPointP8(movabilityE);
+
+        }else if (option8 === "phoenix") {
+            agent8.className = '';
+            agent8.classList.add("phoenix");
+
+            document.querySelectorAll(".lightgreen").forEach(el => el.remove());
+
+            addPointP8(screenE);
+            addPointP8(flashE);
+            addPointP8(flashE);
+            addPointP8(healSelfE);
+            addPointP8(healSelfE);
+            addPointP8(healSelfE);
+            addPointP8(dmgAreaE);
+            addPointP8(dmgAreaE);
+            addPointP8(dmgAreaE);
+            addPointP8(movabilityE);
+
+        }else if (option8 === "raze") {
+            agent8.className = '';
+            agent8.classList.add("raze");
+
+            document.querySelectorAll(".lightgreen").forEach(el => el.remove());
+
+            addPointP8(obstacleE);
+            addPointP8(dmgExplE);
+            addPointP8(dmgExplE);
+            addPointP8(dmgExplE);
+            addPointP8(dmgExplE);
+            addPointP8(movabilityE);
+            addPointP8(movabilityE);
+            
+        }else if (option8 === "reyna") {
+            agent8.className = '';
+            agent8.classList.add("reyna");
+
+            document.querySelectorAll(".lightgreen").forEach(el => el.remove());
+
+            addPointP8(blindE);
+            addPointP8(blindE);
+            addPointP8(healSelfE);
+            addPointP8(healSelfE);
+            addPointP8(healSelfE);
+            addPointP8(rapidFireE);
+            addPointP8(rapidFireE);
+            addPointP8(movabilityE);
+
+        }else if (option8 === "sage") {
+            agent8.className = '';
+            agent8.classList.add("sage");
+
+            document.querySelectorAll(".lightgreen").forEach(el => el.remove());
+
+            addPointP8(obstacleE);
+            addPointP8(obstacleE);
+            addPointP8(obstacleE);
+            addPointP8(slowE);
+            addPointP8(slowE);
+            addPointP8(healE);
+            addPointP8(healE);
+            addPointP8(healSelfE);
+
+        }else if (option8 === "skye") {
+            agent8.className = '';
+            agent8.classList.add("skye");
+
+            document.querySelectorAll(".lightgreen").forEach(el => el.remove());
+
+            addPointP8(flashE);
+            addPointP8(flashE);
+            addPointP8(flashE);
+            addPointP8(blindE);
+            addPointP8(blindE);
+            addPointP8(blindE);
+            addPointP8(healE);
+            addPointP8(healE);
+            addPointP8(dazeE);
+            addPointP8(trackE);
+            addPointP8(trackE);
+            addPointP8(trackE);
+
+        }else if (option8 === "sova") {
+            agent8.className = '';
+            agent8.classList.add("sova");
+
+            document.querySelectorAll(".lightgreen").forEach(el => el.remove());
+
+            addPointP8(trackE);
+            addPointP8(revealE);
+            addPointP8(revealE);
+            addPointP8(revealE);
+            addPointP8(dmgExplE);
+            addPointP8(dmgExplE);
+            addPointP8(dmgExplE);
+
+        }else if (option8 === "viper") {
+            agent8.className = '';
+            agent8.classList.add("viper");
+
+            document.querySelectorAll(".lightgreen").forEach(el => el.remove());
+
+            addPointP8(smokeE);
+            addPointP8(smokeE);
+            addPointP8(smokeE);
+            addPointP8(screenE);
+            addPointP8(obstacleE);
+            addPointP8(dmgExplE);
+            addPointP8(dmgAreaE);
+            addPointP8(dmgAreaE);
+            addPointP8(dmgAreaE);
+
+        }else if (option8 === "yoru") {
+            agent8.className = '';
+            agent8.classList.add("yoru");
+
+            document.querySelectorAll(".lightgreen").forEach(el => el.remove());
+
+            addPointP8(flashE);
+            addPointP8(flashE);
+            addPointP8(trackE);
+            addPointP8(trackE);
+            addPointP8(teleportE);
+            addPointP8(teleportE);
+            addPointP8(movabilityE);
+            addPointP8(movabilityE);
+        }
+
+        console.log(option8);
+    });
+
+    let agent9 = document.querySelector("#agent9");
+    let player9 = document.querySelector("#player9");   
+    player9.addEventListener('change', function() {
+        let option9 = this.options[this.selectedIndex].value;
+        
+        if (option9 === "astra") {
+            agent9.className = '';
+            agent9.classList.add("astra");
+
+            document.querySelectorAll(".khaki").forEach(el => el.remove());
+
+            addPointP9(smokeE);
+            addPointP9(smokeE);
+            addPointP9(smokeE);
+            addPointP9(smokeE);
+            addPointP9(smokeE);
+            addPointP9(obstacleE);
+            addPointP9(dazeE);
+            addPointP9(dmgExplE);
+               
+        } else if (option9 === "breach") {
+            agent9.className = '';
+            agent9.classList.add("breach");
+
+            document.querySelectorAll(".khaki").forEach(el => el.remove());
+
+            addPointP9(flashE);
+            addPointP9(flashE);
+            addPointP9(flashE);
+            addPointP9(dazeE);
+            addPointP9(dazeE);
+            addPointP9(dazeE);
+            addPointP9(dazeE);
+            addPointP9(dmgExplE);
+            addPointP9(dmgExplE);
+            
+        }else if (option9 === "brimstone") {
+            agent9.className = '';
+            agent9.classList.add("brimstone");
+            
+            document.querySelectorAll(".khaki").forEach(el => el.remove());
+
+            addPointP9(smokeE);
+            addPointP9(smokeE);
+            addPointP9(smokeE);
+            addPointP9(dmgExplE);
+            addPointP9(dmgExplE);
+            addPointP9(dmgExplE);
+            addPointP9(dmgAreaE);
+            addPointP9(dmgAreaE);
+            addPointP9(dmgAreaE);
+            addPointP9(rapidFireE);
+            addPointP9(rapidFireE);
+            
+        }else if (option9 === "cypher") {
+            agent9.className = '';
+            agent9.classList.add("cypher");
+
+            document.querySelectorAll(".khaki").forEach(el => el.remove());
+
+            addPointP9(smokeE);
+            addPointP9(obstacleE);
+            addPointP9(obstacleE);
+            addPointP9(obstacleE);
+            addPointP9(slowE);
+            addPointP9(slowE);
+            addPointP9(dazeE);
+            addPointP9(trackE);
+            addPointP9(trackE);
+            addPointP9(revealE);
+            addPointP9(revealE);
+            addPointP9(revealE);
+
+        }else if (option9 === "jett") {
+            agent9.className = '';
+            agent9.classList.add("jett");
+
+            document.querySelectorAll(".khaki").forEach(el => el.remove());
+
+            addPointP9(smokeE);
+            addPointP9(dmgExplE);
+            addPointP9(dmgExplE);
+            addPointP9(movabilityE);
+            addPointP9(movabilityE);
+            addPointP9(movabilityE);
+            addPointP9(movabilityE);
+
+        }else if (option9 === "killjoy") {
+            agent9.className = '';
+            agent9.classList.add("killjoy");
+
+            document.querySelectorAll(".khaki").forEach(el => el.remove());
+
+            addPointP9(obstacleE);
+            addPointP9(obstacleE);
+            addPointP9(obstacleE);
+            addPointP9(slowE);
+            addPointP9(trackE);
+            addPointP9(trackE);
+            addPointP9(dmgExplE);
+            addPointP9(dmgAreaE);
+            addPointP9(dmgAreaE);
+            addPointP9(dmgAreaE);
+            addPointP9(dmgAreaE);
+
+        }else if (option9 === "omen") {
+            agent9.className = '';
+            agent9.classList.add("omen");
+
+            document.querySelectorAll(".khaki").forEach(el => el.remove());
+
+            addPointP9(smokeE);
+            addPointP9(smokeE);
+            addPointP9(blindE);
+            addPointP9(trackE);
+            addPointP9(teleportE);
+            addPointP9(teleportE);
+            addPointP9(movabilityE);
+            addPointP9(movabilityE);
+
+        }else if (option9 === "phoenix") {
+            agent9.className = '';
+            agent9.classList.add("phoenix");
+
+            document.querySelectorAll(".khaki").forEach(el => el.remove());
+
+            addPointP9(screenE);
+            addPointP9(flashE);
+            addPointP9(flashE);
+            addPointP9(healSelfE);
+            addPointP9(healSelfE);
+            addPointP9(healSelfE);
+            addPointP9(dmgAreaE);
+            addPointP9(dmgAreaE);
+            addPointP9(dmgAreaE);
+            addPointP9(movabilityE);
+
+        }else if (option9 === "raze") {
+            agent9.className = '';
+            agent9.classList.add("raze");
+
+            document.querySelectorAll(".khaki").forEach(el => el.remove());
+
+            addPointP9(obstacleE);
+            addPointP9(dmgExplE);
+            addPointP9(dmgExplE);
+            addPointP9(dmgExplE);
+            addPointP9(dmgExplE);
+            addPointP9(movabilityE);
+            addPointP9(movabilityE);
+            
+        }else if (option9 === "reyna") {
+            agent9.className = '';
+            agent9.classList.add("reyna");
+
+            document.querySelectorAll(".khaki").forEach(el => el.remove());
+
+            addPointP9(blindE);
+            addPointP9(blindE);
+            addPointP9(healSelfE);
+            addPointP9(healSelfE);
+            addPointP9(healSelfE);
+            addPointP9(rapidFireE);
+            addPointP9(rapidFireE);
+            addPointP9(movabilityE);
+
+        }else if (option9 === "sage") {
+            agent9.className = '';
+            agent9.classList.add("sage");
+
+            document.querySelectorAll(".khaki").forEach(el => el.remove());
+
+            addPointP9(obstacleE);
+            addPointP9(obstacleE);
+            addPointP9(obstacleE);
+            addPointP9(slowE);
+            addPointP9(slowE);
+            addPointP9(healE);
+            addPointP9(healE);
+            addPointP9(healSelfE);
+
+        }else if (option9 === "skye") {
+            agent9.className = '';
+            agent9.classList.add("skye");
+
+            document.querySelectorAll(".khaki").forEach(el => el.remove());
+
+            addPointP9(flashE);
+            addPointP9(flashE);
+            addPointP9(flashE);
+            addPointP9(blindE);
+            addPointP9(blindE);
+            addPointP9(blindE);
+            addPointP9(healE);
+            addPointP9(healE);
+            addPointP9(dazeE);
+            addPointP9(trackE);
+            addPointP9(trackE);
+            addPointP9(trackE);
+
+        }else if (option9 === "sova") {
+            agent9.className = '';
+            agent9.classList.add("sova");
+
+            document.querySelectorAll(".khaki").forEach(el => el.remove());
+
+            addPointP9(trackE);
+            addPointP9(revealE);
+            addPointP9(revealE);
+            addPointP9(revealE);
+            addPointP9(dmgExplE);
+            addPointP9(dmgExplE);
+            addPointP9(dmgExplE);
+
+        }else if (option9 === "viper") {
+            agent9.className = '';
+            agent9.classList.add("viper");
+
+            document.querySelectorAll(".khaki").forEach(el => el.remove());
+
+            addPointP9(smokeE);
+            addPointP9(smokeE);
+            addPointP9(smokeE);
+            addPointP9(screenE);
+            addPointP9(obstacleE);
+            addPointP9(dmgExplE);
+            addPointP9(dmgAreaE);
+            addPointP9(dmgAreaE);
+            addPointP9(dmgAreaE);
+
+        }else if (option9 === "yoru") {
+            agent9.className = '';
+            agent9.classList.add("yoru");
+
+            document.querySelectorAll(".khaki").forEach(el => el.remove());
+
+            addPointP9(flashE);
+            addPointP9(flashE);
+            addPointP9(trackE);
+            addPointP9(trackE);
+            addPointP9(teleportE);
+            addPointP9(teleportE);
+            addPointP9(movabilityE);
+            addPointP9(movabilityE);
+        }
+
+        console.log(option9);
+    });
+
+    let agent10 = document.querySelector("#agent10");
+    let player10 = document.querySelector("#player10");
+    player10.addEventListener('change', function() {
+        let option10 = this.options[this.selectedIndex].value;
+        
+        if (option10 === "astra") {
+            agent10.className = '';
+            agent10.classList.add("astra");
+
+            document.querySelectorAll(".lightpink").forEach(el => el.remove());
+
+            addPointP10(smokeE);
+            addPointP10(smokeE);
+            addPointP10(smokeE);
+            addPointP10(smokeE);
+            addPointP10(smokeE);
+            addPointP10(obstacleE);
+            addPointP10(dazeE);
+            addPointP10(dmgExplE);
+               
+        } else if (option10 === "breach") {
+            agent10.className = '';
+            agent10.classList.add("breach");
+
+            document.querySelectorAll(".lightpink").forEach(el => el.remove());
+
+            addPointP10(flashE);
+            addPointP10(flashE);
+            addPointP10(flashE);
+            addPointP10(dazeE);
+            addPointP10(dazeE);
+            addPointP10(dazeE);
+            addPointP10(dazeE);
+            addPointP10(dmgExplE);
+            addPointP10(dmgExplE);
+            
+        }else if (option10 === "brimstone") {
+            agent10.className = '';
+            agent10.classList.add("brimstone");
+            
+            document.querySelectorAll(".lightpink").forEach(el => el.remove());
+
+            addPointP10(smokeE);
+            addPointP10(smokeE);
+            addPointP10(smokeE);
+            addPointP10(dmgExplE);
+            addPointP10(dmgExplE);
+            addPointP10(dmgExplE);
+            addPointP10(dmgAreaE);
+            addPointP10(dmgAreaE);
+            addPointP10(dmgAreaE);
+            addPointP10(rapidFireE);
+            addPointP10(rapidFireE);
+            
+        }else if (option10 === "cypher") {
+            agent10.className = '';
+            agent10.classList.add("cypher");
+
+            document.querySelectorAll(".lightpink").forEach(el => el.remove());
+
+            addPointP10(smokeE);
+            addPointP10(obstacleE);
+            addPointP10(obstacleE);
+            addPointP10(obstacleE);
+            addPointP10(slowE);
+            addPointP10(slowE);
+            addPointP10(dazeE);
+            addPointP10(trackE);
+            addPointP10(trackE);
+            addPointP10(revealE);
+            addPointP10(revealE);
+            addPointP10(revealE);
+
+        }else if (option10 === "jett") {
+            agent10.className = '';
+            agent10.classList.add("jett");
+
+            document.querySelectorAll(".lightpink").forEach(el => el.remove());
+
+            addPointP10(smokeE);
+            addPointP10(dmgExplE);
+            addPointP10(dmgExplE);
+            addPointP10(movabilityE);
+            addPointP10(movabilityE);
+            addPointP10(movabilityE);
+            addPointP10(movabilityE);
+
+        }else if (option10 === "killjoy") {
+            agent10.className = '';
+            agent10.classList.add("killjoy");
+
+            document.querySelectorAll(".lightpink").forEach(el => el.remove());
+
+            addPointP10(obstacleE);
+            addPointP10(obstacleE);
+            addPointP10(obstacleE);
+            addPointP10(slowE);
+            addPointP10(trackE);
+            addPointP10(trackE);
+            addPointP10(dmgExplE);
+            addPointP10(dmgAreaE);
+            addPointP10(dmgAreaE);
+            addPointP10(dmgAreaE);
+            addPointP10(dmgAreaE);
+
+        }else if (option10 === "omen") {
+            agent10.className = '';
+            agent10.classList.add("omen");
+
+            document.querySelectorAll(".lightpink").forEach(el => el.remove());
+
+            addPointP10(smokeE);
+            addPointP10(smokeE);
+            addPointP10(blindE);
+            addPointP10(trackE);
+            addPointP10(teleportE);
+            addPointP10(teleportE);
+            addPointP10(movabilityE);
+            addPointP10(movabilityE);
+
+        }else if (option10 === "phoenix") {
+            agent10.className = '';
+            agent10.classList.add("phoenix");
+
+            document.querySelectorAll(".lightpink").forEach(el => el.remove());
+
+            addPointP10(screenE);
+            addPointP10(flashE);
+            addPointP10(flashE);
+            addPointP10(healSelfE);
+            addPointP10(healSelfE);
+            addPointP10(healSelfE);
+            addPointP10(dmgAreaE);
+            addPointP10(dmgAreaE);
+            addPointP10(dmgAreaE);
+            addPointP10(movabilityE);
+
+        }else if (option10 === "raze") {
+            agent10.className = '';
+            agent10.classList.add("raze");
+
+            document.querySelectorAll(".lightpink").forEach(el => el.remove());
+
+            addPointP10(obstacleE);
+            addPointP10(dmgExplE);
+            addPointP10(dmgExplE);
+            addPointP10(dmgExplE);
+            addPointP10(dmgExplE);
+            addPointP10(movabilityE);
+            addPointP10(movabilityE);
+            
+        }else if (option10 === "reyna") {
+            agent10.className = '';
+            agent10.classList.add("reyna");
+
+            document.querySelectorAll(".lightpink").forEach(el => el.remove());
+
+            addPointP10(blindE);
+            addPointP10(blindE);
+            addPointP10(healSelfE);
+            addPointP10(healSelfE);
+            addPointP10(healSelfE);
+            addPointP10(rapidFireE);
+            addPointP10(rapidFireE);
+            addPointP10(movabilityE);
+
+        }else if (option10 === "sage") {
+            agent10.className = '';
+            agent10.classList.add("sage");
+
+            document.querySelectorAll(".lightpink").forEach(el => el.remove());
+
+            addPointP10(obstacleE);
+            addPointP10(obstacleE);
+            addPointP10(obstacleE);
+            addPointP10(slowE);
+            addPointP10(slowE);
+            addPointP10(healE);
+            addPointP10(healE);
+            addPointP10(healSelfE);
+
+        }else if (option10 === "skye") {
+            agent10.className = '';
+            agent10.classList.add("skye");
+
+            document.querySelectorAll(".lightpink").forEach(el => el.remove());
+
+            addPointP10(flashE);
+            addPointP10(flashE);
+            addPointP10(flashE);
+            addPointP10(blindE);
+            addPointP10(blindE);
+            addPointP10(blindE);
+            addPointP10(healE);
+            addPointP10(healE);
+            addPointP10(dazeE);
+            addPointP10(trackE);
+            addPointP10(trackE);
+            addPointP10(trackE);
+
+        }else if (option10 === "sova") {
+            agent10.className = '';
+            agent10.classList.add("sova");
+
+            document.querySelectorAll(".lightpink").forEach(el => el.remove());
+
+            addPointP10(trackE);
+            addPointP10(revealE);
+            addPointP10(revealE);
+            addPointP10(revealE);
+            addPointP10(dmgExplE);
+            addPointP10(dmgExplE);
+            addPointP10(dmgExplE);
+
+        }else if (option10 === "viper") {
+            agent10.className = '';
+            agent10.classList.add("viper");
+
+            document.querySelectorAll(".lightpink").forEach(el => el.remove());
+
+            addPointP10(smokeE);
+            addPointP10(smokeE);
+            addPointP10(smokeE);
+            addPointP10(screenE);
+            addPointP10(obstacleE);
+            addPointP10(dmgExplE);
+            addPointP10(dmgAreaE);
+            addPointP10(dmgAreaE);
+            addPointP10(dmgAreaE);
+
+        }else if (option10 === "yoru") {
+            agent10.className = '';
+            agent10.classList.add("yoru");
+
+            document.querySelectorAll(".lightpink").forEach(el => el.remove());
+
+            addPointP10(flashE);
+            addPointP10(flashE);
+            addPointP10(trackE);
+            addPointP10(trackE);
+            addPointP10(teleportE);
+            addPointP10(teleportE);
+            addPointP10(movabilityE);
+            addPointP10(movabilityE);
+        }
+
+        console.log(option10);
     });
 
 }
