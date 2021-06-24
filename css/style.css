@@ -94,6 +94,12 @@ aside section {
     background-position: 80px;
     background-repeat: no-repeat;
 }
+.kayo {
+    background-image: url(../img/kayo.png);
+    background-position: 140px -50px;
+    background-size: 200px;
+    background-repeat: no-repeat;
+}
 .killjoy {
     background-image: url(../img/killjoy.png);
     background-position: 80px;
@@ -186,23 +192,23 @@ p {
     
 }
 
-.smokeE, .screenE, .flashE, .blindE, .obstacleE, .slowE, .dazeE, .healE, .healSelfE, .trackE, .revealE, .dmgExplE, .dmgAreaE, .teleportE, .movabilityE, .rapidFireE {
+.smokeE, .screenE, .flashE, .blindE, .obstacleE, .slowE, .dazeE, .healE, .healSelfE, .trackE, .revealE, .dmgExplE, .dmgAreaE, .teleportE, .movabilityE, .rapidFireE, .concussionE, .reviveE, .decoyE, .vulnerableE, .suppressionE, .detainE {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
 }
-.smoke, .screen, .flash, .blind, .obstacle, .slow, .daze, .heal, .healSelf, .track, .reveal, .dmgExpl, .dmgArea, .teleport, .movability, .rapidFire {
+.smoke, .screen, .flash, .blind, .obstacle, .slow, .daze, .heal, .healSelf, .track, .reveal, .dmgExpl, .dmgArea, .teleport, .movability, .rapidFire, .concussion, .revive, .decoy, .vulnerable, .suppression, .detain {
     display: flex;
     justify-content: flex-start;
 }
 
 @media screen and (max-width: 640px) {
-
+    body {
+        font-size:smaller;
+    }
     nav {
         flex-direction: column;
-        
     }
-
     div {
         height: 5px;
         width: 5px;

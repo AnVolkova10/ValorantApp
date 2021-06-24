@@ -1,6 +1,5 @@
 window.onload = () => {
 
-
     //Allied Abilities
     let smoke = document.querySelector(".smoke");
     let screen = document.querySelector(".screen");
@@ -18,6 +17,12 @@ window.onload = () => {
     let teleport = document.querySelector(".teleport");
     let movability = document.querySelector(".movability");
     let rapidFire = document.querySelector(".rapidFire");
+    let concussion = document.querySelector(".concussion");
+    let revive = document.querySelector(".revive");
+    let decoy = document.querySelector(".decoy");
+    let vulnerable = document.querySelector(".vulnerable");
+    let suppression = document.querySelector(".suppression");
+    let detain = document.querySelector(".detain");
 
     // Enemy Abilities
     let smokeE = document.querySelector(".smokeE");
@@ -36,6 +41,12 @@ window.onload = () => {
     let teleportE = document.querySelector(".teleportE");
     let movabilityE = document.querySelector(".movabilityE");
     let rapidFireE = document.querySelector(".rapidFireE");
+    let concussionE = document.querySelector(".concussionE");
+    let reviveE = document.querySelector(".reviveE");
+    let decoyE = document.querySelector(".decoyE");
+    let vulnerableE = document.querySelector(".vulnerableE");
+    let suppressionE = document.querySelector(".suppressionE");
+    let detainE = document.querySelector(".detainE");
 
     // Player
     let colorP1 = "blue";
@@ -63,21 +74,17 @@ window.onload = () => {
         if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
             addPoint(smoke, player);
             addPoint(smoke, player);
-            addPoint(smoke, player);
-            addPoint(smoke, player);
-            addPoint(smoke, player);
+            addPoint(vulnerable, player);
             addPoint(obstacle, player);
+            addPoint(slow, player);
             addPoint(daze, player);
-            addPoint(dmgExpl, player);
         } else {
             addPoint(smokeE, player);
             addPoint(smokeE, player);
-            addPoint(smokeE, player);
-            addPoint(smokeE, player);
-            addPoint(smokeE, player);
+            addPoint(vulnerableE, player);
             addPoint(obstacleE, player);
+            addPoint(slowE, player);
             addPoint(dazeE, player);
-            addPoint(dmgExplE, player);
         }
 
     }
@@ -85,23 +92,15 @@ window.onload = () => {
         if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
             addPoint(flash, player);
             addPoint(flash, player);
-            addPoint(flash, player);
             addPoint(daze, player);
             addPoint(daze, player);
-            addPoint(daze, player);
-            addPoint(daze, player);
-            addPoint(dmgExpl, player);
             addPoint(dmgExpl, player);
 
         } else {
             addPoint(flashE, player);
             addPoint(flashE, player);
-            addPoint(flashE, player);
             addPoint(dazeE, player);
             addPoint(dazeE, player);
-            addPoint(dazeE, player);
-            addPoint(dazeE, player);
-            addPoint(dmgExplE, player);
             addPoint(dmgExplE, player);
 
         }
@@ -113,10 +112,6 @@ window.onload = () => {
             addPoint(smoke, player);
             addPoint(smoke, player);
             addPoint(dmgExpl, player);
-            addPoint(dmgExpl, player);
-            addPoint(dmgExpl, player);
-            addPoint(dmgArea, player);
-            addPoint(dmgArea, player);
             addPoint(dmgArea, player);
             addPoint(rapidFire, player);
             addPoint(rapidFire, player);
@@ -126,10 +121,6 @@ window.onload = () => {
             addPoint(smokeE, player);
             addPoint(smokeE, player);
             addPoint(dmgExplE, player);
-            addPoint(dmgExplE, player);
-            addPoint(dmgExplE, player);
-            addPoint(dmgAreaE, player);
-            addPoint(dmgAreaE, player);
             addPoint(dmgAreaE, player);
             addPoint(rapidFireE, player);
             addPoint(rapidFireE, player);
@@ -139,10 +130,8 @@ window.onload = () => {
     }
     function cypherAbilities(player) {
         if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
+            addPoint(smoke, player);
             addPoint(obstacle, player);
-            addPoint(obstacle, player);
-            addPoint(obstacle, player);
-            addPoint(slow, player);
             addPoint(slow, player);
             addPoint(daze, player);
             addPoint(track, player);
@@ -154,9 +143,6 @@ window.onload = () => {
         } else {
             addPoint(smokeE, player);
             addPoint(obstacleE, player);
-            addPoint(obstacleE, player);
-            addPoint(obstacleE, player);
-            addPoint(slowE, player);
             addPoint(slowE, player);
             addPoint(dazeE, player);
             addPoint(trackE, player);
@@ -176,7 +162,6 @@ window.onload = () => {
             addPoint(movability, player);
             addPoint(movability, player);
             addPoint(movability, player);
-            addPoint(movability, player);
 
         } else {
             addPoint(smokeE, player);
@@ -185,37 +170,56 @@ window.onload = () => {
             addPoint(movabilityE, player);
             addPoint(movabilityE, player);
             addPoint(movabilityE, player);
-            addPoint(movabilityE, player);
 
+        }
+
+    }
+    function kayoAbilities(player) {
+        if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
+            addPoint(flash, player);
+            addPoint(flash, player);
+            addPoint(dmgArea, player);
+            addPoint(suppression, player);
+            addPoint(suppression, player);
+            addPoint(revive, player);
+            addPoint(rapidFire, player);
+        } else {
+            addPoint(flashE, player);
+            addPoint(flashE, player);
+            addPoint(dmgAreaE, player);
+            addPoint(suppressionE, player);
+            addPoint(suppressionE, player);
+            addPoint(reviveE, player);
+            addPoint(rapidFireE, player);
         }
 
     }
     function killjoyAbilities(player) {
         if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-            addPoint(obstacle, player);
+            addPoint(vulnerable, player);
             addPoint(obstacle, player);
             addPoint(obstacle, player);
             addPoint(slow, player);
             addPoint(track, player);
             addPoint(track, player);
+            addPoint(track, player);
             addPoint(dmgExpl, player);
             addPoint(dmgArea, player);
             addPoint(dmgArea, player);
-            addPoint(dmgArea, player);
-            addPoint(dmgArea, player);
+            addPoint(detain, player);
 
         } else {
-            addPoint(obstacleE, player);
+            addPoint(vulnerableE, player);
             addPoint(obstacleE, player);
             addPoint(obstacleE, player);
             addPoint(slowE, player);
             addPoint(trackE, player);
             addPoint(trackE, player);
+            addPoint(trackE, player);
             addPoint(dmgExplE, player);
             addPoint(dmgAreaE, player);
             addPoint(dmgAreaE, player);
-            addPoint(dmgAreaE, player);
-            addPoint(dmgAreaE, player);
+            addPoint(detainE, player);
 
         }
 
@@ -227,7 +231,6 @@ window.onload = () => {
             addPoint(blind, player);
             addPoint(track, player);
             addPoint(teleport, player);
-            addPoint(teleport, player);
             addPoint(movability, player);
             addPoint(movability, player);
 
@@ -236,7 +239,6 @@ window.onload = () => {
             addPoint(smokeE, player);
             addPoint(blindE, player);
             addPoint(trackE, player);
-            addPoint(teleportE, player);
             addPoint(teleportE, player);
             addPoint(movabilityE, player);
             addPoint(movabilityE, player);
@@ -252,8 +254,8 @@ window.onload = () => {
             addPoint(healSelf, player);
             addPoint(healSelf, player);
             addPoint(healSelf, player);
-            addPoint(dmgArea, player);
-            addPoint(dmgArea, player);
+            addPoint(revive, player);
+            addPoint(dmgExpl, player);
             addPoint(dmgArea, player);
             addPoint(movability, player);
 
@@ -264,8 +266,8 @@ window.onload = () => {
             addPoint(healSelfE, player);
             addPoint(healSelfE, player);
             addPoint(healSelfE, player);
-            addPoint(dmgAreaE, player);
-            addPoint(dmgAreaE, player);
+            addPoint(reviveE, player);
+            addPoint(dmgExplE, player);
             addPoint(dmgAreaE, player);
             addPoint(movabilityE, player);
 
@@ -274,20 +276,20 @@ window.onload = () => {
     }
     function razeAbilities(player) {
         if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-            addPoint(obstacle, player);
             addPoint(dmgExpl, player);
             addPoint(dmgExpl, player);
             addPoint(dmgExpl, player);
             addPoint(dmgExpl, player);
+            addPoint(track, player);
             addPoint(movability, player);
             addPoint(movability, player);
 
         } else {
-            addPoint(obstacleE, player);
             addPoint(dmgExplE, player);
             addPoint(dmgExplE, player);
             addPoint(dmgExplE, player);
             addPoint(dmgExplE, player);
+            addPoint(track, player);
             addPoint(movabilityE, player);
             addPoint(movabilityE, player);
 
@@ -300,9 +302,8 @@ window.onload = () => {
             addPoint(blind, player);
             addPoint(healSelf, player);
             addPoint(healSelf, player);
-            addPoint(healSelf, player);
             addPoint(rapidFire, player);
-            addPoint(rapidFire, player);
+            addPoint(movability, player);
             addPoint(movability, player);
 
         } else {
@@ -310,9 +311,8 @@ window.onload = () => {
             addPoint(blindE, player);
             addPoint(healSelfE, player);
             addPoint(healSelfE, player);
-            addPoint(healSelfE, player);
             addPoint(rapidFireE, player);
-            addPoint(rapidFireE, player);
+            addPoint(movabilityE, player);
             addPoint(movabilityE, player);
 
         }
@@ -321,22 +321,18 @@ window.onload = () => {
     function sageAbilities(player) {
         if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
             addPoint(obstacle, player);
-            addPoint(obstacle, player);
-            addPoint(obstacle, player);
             addPoint(slow, player);
             addPoint(slow, player);
             addPoint(heal, player);
-            addPoint(heal, player);
+            addPoint(revive, player);
             addPoint(healSelf, player);
 
         } else {
             addPoint(obstacleE, player);
-            addPoint(obstacleE, player);
-            addPoint(obstacleE, player);
             addPoint(slowE, player);
             addPoint(slowE, player);
             addPoint(healE, player);
-            addPoint(healE, player);
+            addPoint(reviveE, player);
             addPoint(healSelfE, player);
 
         }
@@ -346,13 +342,9 @@ window.onload = () => {
         if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
             addPoint(flash, player);
             addPoint(flash, player);
-            addPoint(flash, player);
-            addPoint(blind, player);
-            addPoint(blind, player);
             addPoint(blind, player);
             addPoint(heal, player);
-            addPoint(heal, player);
-            addPoint(daze, player);
+            addPoint(concussion, player);
             addPoint(track, player);
             addPoint(track, player);
             addPoint(track, player);
@@ -360,13 +352,9 @@ window.onload = () => {
         } else {
             addPoint(flashE, player);
             addPoint(flashE, player);
-            addPoint(flashE, player);
-            addPoint(blindE, player);
-            addPoint(blindE, player);
             addPoint(blindE, player);
             addPoint(healE, player);
-            addPoint(healE, player);
-            addPoint(dazeE, player);
+            addPoint(concussionE, player);
             addPoint(trackE, player);
             addPoint(trackE, player);
             addPoint(trackE, player);
@@ -377,6 +365,7 @@ window.onload = () => {
     function sovaAbilities(player) {
         if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
             addPoint(track, player);
+            addPoint(track, player);
             addPoint(reveal, player);
             addPoint(reveal, player);
             addPoint(reveal, player);
@@ -385,6 +374,7 @@ window.onload = () => {
             addPoint(dmgExpl, player);
 
         } else {
+            addPoint(trackE, player);
             addPoint(trackE, player);
             addPoint(revealE, player);
             addPoint(revealE, player);
@@ -400,22 +390,22 @@ window.onload = () => {
         if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
             addPoint(smoke, player);
             addPoint(smoke, player);
-            addPoint(smoke, player);
             addPoint(screen, player);
+            addPoint(slow, player);
             addPoint(obstacle, player);
             addPoint(dmgExpl, player);
-            addPoint(dmgArea, player);
+            addPoint(dmgExpl, player);
             addPoint(dmgArea, player);
             addPoint(dmgArea, player);
 
         } else {
             addPoint(smokeE, player);
             addPoint(smokeE, player);
-            addPoint(smokeE, player);
             addPoint(screenE, player);
+            addPoint(slowE, player);
             addPoint(obstacleE, player);
             addPoint(dmgExplE, player);
-            addPoint(dmgAreaE, player);
+            addPoint(dmgExplE, player);
             addPoint(dmgAreaE, player);
             addPoint(dmgAreaE, player);
 
@@ -433,6 +423,9 @@ window.onload = () => {
             addPoint(teleport, player);
             addPoint(movability, player);
             addPoint(movability, player);
+            addPoint(decoy, player);
+            addPoint(decoy, player);
+            addPoint(decoy, player);
 
         } else {
             addPoint(flashE, player);
@@ -443,6 +436,9 @@ window.onload = () => {
             addPoint(teleportE, player);
             addPoint(movabilityE, player);
             addPoint(movabilityE, player);
+            addPoint(decoyE, player);
+            addPoint(decoyE, player);
+            addPoint(decoyE, player);
 
         }
 
@@ -460,7 +456,7 @@ window.onload = () => {
             agent1.className = '';
             agent1.classList.add("astra");
 
-            document.querySelectorAll(paraClases+colorP1).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP1).forEach(el => el.remove());
 
             astraAbilities(colorP1);
 
@@ -468,7 +464,7 @@ window.onload = () => {
             agent1.className = '';
             agent1.classList.add("breach");
 
-            document.querySelectorAll(paraClases+colorP1).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP1).forEach(el => el.remove());
 
             breachAbilities(colorP1);
 
@@ -476,7 +472,7 @@ window.onload = () => {
             agent1.className = '';
             agent1.classList.add("brimstone");
 
-            document.querySelectorAll(paraClases+colorP1).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP1).forEach(el => el.remove());
 
             brimstoneAbilities(colorP1);
 
@@ -484,7 +480,7 @@ window.onload = () => {
             agent1.className = '';
             agent1.classList.add("cypher");
 
-            document.querySelectorAll(paraClases+colorP1).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP1).forEach(el => el.remove());
 
             cypherAbilities(colorP1);
 
@@ -492,15 +488,23 @@ window.onload = () => {
             agent1.className = '';
             agent1.classList.add("jett");
 
-            document.querySelectorAll(paraClases+colorP1).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP1).forEach(el => el.remove());
 
             jettAbilities(colorP1);
+
+        } else if (option1 === "kayo") {
+            agent1.className = '';
+            agent1.classList.add("kayo");
+
+            document.querySelectorAll(paraClases + colorP2).forEach(el => el.remove());
+
+            kayoAbilities(colorP2);
 
         } else if (option1 === "killjoy") {
             agent1.className = '';
             agent1.classList.add("killjoy");
 
-            document.querySelectorAll(paraClases+colorP1).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP1).forEach(el => el.remove());
 
             killjoyAbilities(colorP1);
 
@@ -508,7 +512,7 @@ window.onload = () => {
             agent1.className = '';
             agent1.classList.add("omen");
 
-            document.querySelectorAll(paraClases+colorP1).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP1).forEach(el => el.remove());
 
             omenAbilities(colorP1);
 
@@ -516,7 +520,7 @@ window.onload = () => {
             agent1.className = '';
             agent1.classList.add("phoenix");
 
-            document.querySelectorAll(paraClases+colorP1).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP1).forEach(el => el.remove());
 
             phoenixAbilities(colorP1);
 
@@ -524,7 +528,7 @@ window.onload = () => {
             agent1.className = '';
             agent1.classList.add("raze");
 
-            document.querySelectorAll(paraClases+colorP1).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP1).forEach(el => el.remove());
 
             razeAbilities(colorP1);
 
@@ -532,7 +536,7 @@ window.onload = () => {
             agent1.className = '';
             agent1.classList.add("reyna");
 
-            document.querySelectorAll(paraClases+colorP1).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP1).forEach(el => el.remove());
 
             reynaAbilities(colorP1);
 
@@ -540,7 +544,7 @@ window.onload = () => {
             agent1.className = '';
             agent1.classList.add("sage");
 
-            document.querySelectorAll(paraClases+colorP1).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP1).forEach(el => el.remove());
 
             sageAbilities(colorP1);
 
@@ -548,7 +552,7 @@ window.onload = () => {
             agent1.className = '';
             agent1.classList.add("skye");
 
-            document.querySelectorAll(paraClases+colorP1).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP1).forEach(el => el.remove());
 
             skyeAbilities(colorP1);
 
@@ -556,7 +560,7 @@ window.onload = () => {
             agent1.className = '';
             agent1.classList.add("sova");
 
-            document.querySelectorAll(paraClases+colorP1).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP1).forEach(el => el.remove());
 
             sovaAbilities(colorP1);
 
@@ -564,7 +568,7 @@ window.onload = () => {
             agent1.className = '';
             agent1.classList.add("viper");
 
-            document.querySelectorAll(paraClases+colorP1).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP1).forEach(el => el.remove());
 
             viperAbilities(colorP1);
 
@@ -572,7 +576,7 @@ window.onload = () => {
             agent1.className = '';
             agent1.classList.add("yoru");
 
-            document.querySelectorAll(paraClases+colorP1).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP1).forEach(el => el.remove());
 
             yoruAbilities(colorP1);
         }
@@ -587,7 +591,7 @@ window.onload = () => {
             agent2.className = '';
             agent2.classList.add("astra");
 
-            document.querySelectorAll(paraClases+colorP2).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP2).forEach(el => el.remove());
 
             astraAbilities(colorP2);
 
@@ -595,7 +599,7 @@ window.onload = () => {
             agent2.className = '';
             agent2.classList.add("breach");
 
-            document.querySelectorAll(paraClases+colorP2).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP2).forEach(el => el.remove());
 
             breachAbilities(colorP2);
 
@@ -603,7 +607,7 @@ window.onload = () => {
             agent2.className = '';
             agent2.classList.add("brimstone");
 
-            document.querySelectorAll(paraClases+colorP2).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP2).forEach(el => el.remove());
 
             brimstoneAbilities(colorP2);
 
@@ -611,7 +615,7 @@ window.onload = () => {
             agent2.className = '';
             agent2.classList.add("cypher");
 
-            document.querySelectorAll(paraClases+colorP2).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP2).forEach(el => el.remove());
 
             cypherAbilities(colorP2);
 
@@ -619,15 +623,23 @@ window.onload = () => {
             agent2.className = '';
             agent2.classList.add("jett");
 
-            document.querySelectorAll(paraClases+colorP2).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP2).forEach(el => el.remove());
 
             jettAbilities(colorP2);
+
+        } else if (option2 === "kayo") {
+            agent2.className = '';
+            agent2.classList.add("kayo");
+
+            document.querySelectorAll(paraClases + colorP1).forEach(el => el.remove());
+
+            kayoAbilities(colorP1);
 
         } else if (option2 === "killjoy") {
             agent2.className = '';
             agent2.classList.add("killjoy");
 
-            document.querySelectorAll(paraClases+colorP2).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP2).forEach(el => el.remove());
 
             killjoyAbilities(colorP2);
 
@@ -635,7 +647,7 @@ window.onload = () => {
             agent2.className = '';
             agent2.classList.add("omen");
 
-            document.querySelectorAll(paraClases+colorP2).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP2).forEach(el => el.remove());
 
             omenAbilities(colorP2);
 
@@ -643,7 +655,7 @@ window.onload = () => {
             agent2.className = '';
             agent2.classList.add("phoenix");
 
-            document.querySelectorAll(paraClases+colorP2).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP2).forEach(el => el.remove());
 
             phoenixAbilities(colorP2);
 
@@ -651,7 +663,7 @@ window.onload = () => {
             agent2.className = '';
             agent2.classList.add("raze");
 
-            document.querySelectorAll(paraClases+colorP2).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP2).forEach(el => el.remove());
 
             razeAbilities(colorP2);
 
@@ -659,7 +671,7 @@ window.onload = () => {
             agent2.className = '';
             agent2.classList.add("reyna");
 
-            document.querySelectorAll(paraClases+colorP2).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP2).forEach(el => el.remove());
 
             reynaAbilities(colorP2);
 
@@ -667,7 +679,7 @@ window.onload = () => {
             agent2.className = '';
             agent2.classList.add("sage");
 
-            document.querySelectorAll(paraClases+colorP2).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP2).forEach(el => el.remove());
 
             sageAbilities(colorP2);
 
@@ -675,7 +687,7 @@ window.onload = () => {
             agent2.className = '';
             agent2.classList.add("skye");
 
-            document.querySelectorAll(paraClases+colorP2).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP2).forEach(el => el.remove());
 
             skyeAbilities(colorP2);
 
@@ -683,7 +695,7 @@ window.onload = () => {
             agent2.className = '';
             agent2.classList.add("sova");
 
-            document.querySelectorAll(paraClases+colorP2).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP2).forEach(el => el.remove());
 
             sovaAbilities(colorP2);
 
@@ -691,7 +703,7 @@ window.onload = () => {
             agent2.className = '';
             agent2.classList.add("viper");
 
-            document.querySelectorAll(paraClases+colorP2).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP2).forEach(el => el.remove());
 
             viperAbilities(colorP2);
 
@@ -699,7 +711,7 @@ window.onload = () => {
             agent2.className = '';
             agent2.classList.add("yoru");
 
-            document.querySelectorAll(paraClases+colorP2).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP2).forEach(el => el.remove());
 
             yoruAbilities(colorP2);
         }
@@ -715,7 +727,7 @@ window.onload = () => {
             agent3.className = '';
             agent3.classList.add("astra");
 
-            document.querySelectorAll(paraClases+colorP3).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP3).forEach(el => el.remove());
 
             astraAbilities(colorP3);
 
@@ -723,7 +735,7 @@ window.onload = () => {
             agent3.className = '';
             agent3.classList.add("breach");
 
-            document.querySelectorAll(paraClases+colorP3).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP3).forEach(el => el.remove());
 
             breachAbilities(colorP3);
 
@@ -731,7 +743,7 @@ window.onload = () => {
             agent3.className = '';
             agent3.classList.add("brimstone");
 
-            document.querySelectorAll(paraClases+colorP3).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP3).forEach(el => el.remove());
 
             brimstoneAbilities(colorP3);
 
@@ -739,7 +751,7 @@ window.onload = () => {
             agent3.className = '';
             agent3.classList.add("cypher");
 
-            document.querySelectorAll(paraClases+colorP3).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP3).forEach(el => el.remove());
 
             cypherAbilities(colorP3);
 
@@ -747,15 +759,23 @@ window.onload = () => {
             agent3.className = '';
             agent3.classList.add("jett");
 
-            document.querySelectorAll(paraClases+colorP3).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP3).forEach(el => el.remove());
 
             jettAbilities(colorP3);
+
+        } else if (option3 === "kayo") {
+            agent3.className = '';
+            agent3.classList.add("kayo");
+
+            document.querySelectorAll(paraClases + colorP3).forEach(el => el.remove());
+
+            kayoAbilities(colorP3);
 
         } else if (option3 === "killjoy") {
             agent3.className = '';
             agent3.classList.add("killjoy");
 
-            document.querySelectorAll(paraClases+colorP3).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP3).forEach(el => el.remove());
 
             killjoyAbilities(colorP3);
 
@@ -763,7 +783,7 @@ window.onload = () => {
             agent3.className = '';
             agent3.classList.add("omen");
 
-            document.querySelectorAll(paraClases+colorP3).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP3).forEach(el => el.remove());
 
             omenAbilities(colorP3);
 
@@ -771,7 +791,7 @@ window.onload = () => {
             agent3.className = '';
             agent3.classList.add("phoenix");
 
-            document.querySelectorAll(paraClases+colorP3).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP3).forEach(el => el.remove());
 
             phoenixAbilities(colorP3);
 
@@ -779,7 +799,7 @@ window.onload = () => {
             agent3.className = '';
             agent3.classList.add("raze");
 
-            document.querySelectorAll(paraClases+colorP3).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP3).forEach(el => el.remove());
 
             razeAbilities(colorP3);
 
@@ -787,7 +807,7 @@ window.onload = () => {
             agent3.className = '';
             agent3.classList.add("reyna");
 
-            document.querySelectorAll(paraClases+colorP3).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP3).forEach(el => el.remove());
 
             reynaAbilities(colorP3);
 
@@ -795,7 +815,7 @@ window.onload = () => {
             agent3.className = '';
             agent3.classList.add("sage");
 
-            document.querySelectorAll(paraClases+colorP3).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP3).forEach(el => el.remove());
 
             sageAbilities(colorP3);
 
@@ -803,7 +823,7 @@ window.onload = () => {
             agent3.className = '';
             agent3.classList.add("skye");
 
-            document.querySelectorAll(paraClases+colorP3).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP3).forEach(el => el.remove());
 
             skyeAbilities(colorP3);
 
@@ -811,7 +831,7 @@ window.onload = () => {
             agent3.className = '';
             agent3.classList.add("sova");
 
-            document.querySelectorAll(paraClases+colorP3).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP3).forEach(el => el.remove());
 
             sovaAbilities(colorP3);
 
@@ -819,7 +839,7 @@ window.onload = () => {
             agent3.className = '';
             agent3.classList.add("viper");
 
-            document.querySelectorAll(paraClases+colorP3).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP3).forEach(el => el.remove());
 
             viperAbilities(colorP3);
 
@@ -827,7 +847,7 @@ window.onload = () => {
             agent3.className = '';
             agent3.classList.add("yoru");
 
-            document.querySelectorAll(paraClases+colorP3).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP3).forEach(el => el.remove());
 
             yoruAbilities(colorP3);
         }
@@ -843,7 +863,7 @@ window.onload = () => {
             agent4.className = '';
             agent4.classList.add("astra");
 
-            document.querySelectorAll(paraClases+colorP4).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP4).forEach(el => el.remove());
 
             astraAbilities(colorP4);
 
@@ -851,7 +871,7 @@ window.onload = () => {
             agent4.className = '';
             agent4.classList.add("breach");
 
-            document.querySelectorAll(paraClases+colorP4).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP4).forEach(el => el.remove());
 
             breachAbilities(colorP4);
 
@@ -859,7 +879,7 @@ window.onload = () => {
             agent4.className = '';
             agent4.classList.add("brimstone");
 
-            document.querySelectorAll(paraClases+colorP4).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP4).forEach(el => el.remove());
 
             brimstoneAbilities(colorP4);
 
@@ -867,7 +887,7 @@ window.onload = () => {
             agent4.className = '';
             agent4.classList.add("cypher");
 
-            document.querySelectorAll(paraClases+colorP4).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP4).forEach(el => el.remove());
 
             cypherAbilities(colorP4);
 
@@ -875,15 +895,23 @@ window.onload = () => {
             agent4.className = '';
             agent4.classList.add("jett");
 
-            document.querySelectorAll(paraClases+colorP4).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP4).forEach(el => el.remove());
 
             jettAbilities(colorP4);
+
+        } else if (option4 === "kayo") {
+            agent4.className = '';
+            agent4.classList.add("kayo");
+
+            document.querySelectorAll(paraClases + colorP4).forEach(el => el.remove());
+
+            kayoAbilities(colorP4);
 
         } else if (option4 === "killjoy") {
             agent4.className = '';
             agent4.classList.add("killjoy");
 
-            document.querySelectorAll(paraClases+colorP4).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP4).forEach(el => el.remove());
 
             killjoyAbilities(colorP4);
 
@@ -891,7 +919,7 @@ window.onload = () => {
             agent4.className = '';
             agent4.classList.add("omen");
 
-            document.querySelectorAll(paraClases+colorP4).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP4).forEach(el => el.remove());
 
             omenAbilities(colorP4);
 
@@ -899,7 +927,7 @@ window.onload = () => {
             agent4.className = '';
             agent4.classList.add("phoenix");
 
-            document.querySelectorAll(paraClases+colorP4).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP4).forEach(el => el.remove());
 
             omenAbilities(colorP4);
 
@@ -907,7 +935,7 @@ window.onload = () => {
             agent4.className = '';
             agent4.classList.add("raze");
 
-            document.querySelectorAll(paraClases+colorP4).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP4).forEach(el => el.remove());
 
             razeAbilities(colorP4);
 
@@ -915,7 +943,7 @@ window.onload = () => {
             agent4.className = '';
             agent4.classList.add("reyna");
 
-            document.querySelectorAll(paraClases+colorP4).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP4).forEach(el => el.remove());
 
             reynaAbilities(colorP4);
 
@@ -923,7 +951,7 @@ window.onload = () => {
             agent4.className = '';
             agent4.classList.add("sage");
 
-            document.querySelectorAll(paraClases+colorP4).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP4).forEach(el => el.remove());
 
             sageAbilities(colorP4);
 
@@ -931,7 +959,7 @@ window.onload = () => {
             agent4.className = '';
             agent4.classList.add("skye");
 
-            document.querySelectorAll(paraClases+colorP4).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP4).forEach(el => el.remove());
 
             skyeAbilities(colorP4);
 
@@ -939,7 +967,7 @@ window.onload = () => {
             agent4.className = '';
             agent4.classList.add("sova");
 
-            document.querySelectorAll(paraClases+colorP4).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP4).forEach(el => el.remove());
 
             sovaAbilities(colorP4);
 
@@ -947,7 +975,7 @@ window.onload = () => {
             agent4.className = '';
             agent4.classList.add("viper");
 
-            document.querySelectorAll(paraClases+colorP4).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP4).forEach(el => el.remove());
 
             viperAbilities(colorP4);
 
@@ -955,7 +983,7 @@ window.onload = () => {
             agent4.className = '';
             agent4.classList.add("yoru");
 
-            document.querySelectorAll(paraClases+colorP4).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP4).forEach(el => el.remove());
 
             yoruAbilities(colorP4);
         }
@@ -970,7 +998,7 @@ window.onload = () => {
             agent5.className = '';
             agent5.classList.add("astra");
 
-            document.querySelectorAll(paraClases+colorP5).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP5).forEach(el => el.remove());
 
             astraAbilities(colorP5);
 
@@ -978,7 +1006,7 @@ window.onload = () => {
             agent5.className = '';
             agent5.classList.add("breach");
 
-            document.querySelectorAll(paraClases+colorP5).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP5).forEach(el => el.remove());
 
             breachAbilities(colorP5);
 
@@ -986,7 +1014,7 @@ window.onload = () => {
             agent5.className = '';
             agent5.classList.add("brimstone");
 
-            document.querySelectorAll(paraClases+colorP5).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP5).forEach(el => el.remove());
 
             brimstoneAbilities(colorP5);
 
@@ -994,7 +1022,7 @@ window.onload = () => {
             agent5.className = '';
             agent5.classList.add("cypher");
 
-            document.querySelectorAll(paraClases+colorP5).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP5).forEach(el => el.remove());
 
             cypherAbilities(colorP5);
 
@@ -1002,15 +1030,23 @@ window.onload = () => {
             agent5.className = '';
             agent5.classList.add("jett");
 
-            document.querySelectorAll(paraClases+colorP5).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP5).forEach(el => el.remove());
 
             jettAbilities(colorP5);
+
+        } else if (option5 === "kayo") {
+            agent5.className = '';
+            agent5.classList.add("kayo");
+
+            document.querySelectorAll(paraClases + colorP5).forEach(el => el.remove());
+
+            kayoAbilities(colorP5);
 
         } else if (option5 === "killjoy") {
             agent5.className = '';
             agent5.classList.add("killjoy");
 
-            document.querySelectorAll(paraClases+colorP5).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP5).forEach(el => el.remove());
 
             killjoyAbilities(colorP5);
 
@@ -1018,7 +1054,7 @@ window.onload = () => {
             agent5.className = '';
             agent5.classList.add("omen");
 
-            document.querySelectorAll(paraClases+colorP5).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP5).forEach(el => el.remove());
 
             omenAbilities(colorP5);
 
@@ -1026,7 +1062,7 @@ window.onload = () => {
             agent5.className = '';
             agent5.classList.add("phoenix");
 
-            document.querySelectorAll(paraClases+colorP5).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP5).forEach(el => el.remove());
 
             phoenixAbilities(colorP5);
 
@@ -1034,7 +1070,7 @@ window.onload = () => {
             agent5.className = '';
             agent5.classList.add("raze");
 
-            document.querySelectorAll(paraClases+colorP5).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP5).forEach(el => el.remove());
 
             razeAbilities(colorP5);
 
@@ -1042,7 +1078,7 @@ window.onload = () => {
             agent5.className = '';
             agent5.classList.add("reyna");
 
-            document.querySelectorAll(paraClases+colorP5).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP5).forEach(el => el.remove());
 
             reynaAbilities(colorP5);
 
@@ -1050,7 +1086,7 @@ window.onload = () => {
             agent5.className = '';
             agent5.classList.add("sage");
 
-            document.querySelectorAll(paraClases+colorP5).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP5).forEach(el => el.remove());
 
             sageAbilities(colorP5);
 
@@ -1058,7 +1094,7 @@ window.onload = () => {
             agent5.className = '';
             agent5.classList.add("skye");
 
-            document.querySelectorAll(paraClases+colorP5).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP5).forEach(el => el.remove());
 
             skyeAbilities(colorP5);
 
@@ -1066,7 +1102,7 @@ window.onload = () => {
             agent5.className = '';
             agent5.classList.add("sova");
 
-            document.querySelectorAll(paraClases+colorP5).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP5).forEach(el => el.remove());
 
             sovaAbilities(colorP5);
 
@@ -1074,7 +1110,7 @@ window.onload = () => {
             agent5.className = '';
             agent5.classList.add("viper");
 
-            document.querySelectorAll(paraClases+colorP5).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP5).forEach(el => el.remove());
 
             viperAbilities(colorP5);
 
@@ -1082,7 +1118,7 @@ window.onload = () => {
             agent5.className = '';
             agent5.classList.add("yoru");
 
-            document.querySelectorAll(paraClases+colorP5).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP5).forEach(el => el.remove());
 
             yoruAbilities(colorP5);
         }
@@ -1097,7 +1133,7 @@ window.onload = () => {
             agent6.className = '';
             agent6.classList.add("astra");
 
-            document.querySelectorAll(paraClases+colorP6).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP6).forEach(el => el.remove());
 
             astraAbilities(colorP6);
 
@@ -1105,7 +1141,7 @@ window.onload = () => {
             agent6.className = '';
             agent6.classList.add("breach");
 
-            document.querySelectorAll(paraClases+colorP6).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP6).forEach(el => el.remove());
 
             breachAbilities(colorP6);
 
@@ -1113,7 +1149,7 @@ window.onload = () => {
             agent6.className = '';
             agent6.classList.add("brimstone");
 
-            document.querySelectorAll(paraClases+colorP6).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP6).forEach(el => el.remove());
 
             brimstoneAbilities(colorP6);
 
@@ -1121,7 +1157,7 @@ window.onload = () => {
             agent6.className = '';
             agent6.classList.add("cypher");
 
-            document.querySelectorAll(paraClases+colorP6).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP6).forEach(el => el.remove());
 
             cypherAbilities(colorP6);
 
@@ -1129,15 +1165,23 @@ window.onload = () => {
             agent6.className = '';
             agent6.classList.add("jett");
 
-            document.querySelectorAll(paraClases+colorP6).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP6).forEach(el => el.remove());
 
             jettAbilities(colorP6);
+
+        } else if (option6 === "kayo") {
+            agent6.className = '';
+            agent6.classList.add("kayo");
+
+            document.querySelectorAll(paraClases + colorP6).forEach(el => el.remove());
+
+            kayoAbilities(colorP6);
 
         } else if (option6 === "killjoy") {
             agent6.className = '';
             agent6.classList.add("killjoy");
 
-            document.querySelectorAll(paraClases+colorP6).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP6).forEach(el => el.remove());
 
             killjoyAbilities(colorP6);
 
@@ -1145,7 +1189,7 @@ window.onload = () => {
             agent6.className = '';
             agent6.classList.add("omen");
 
-            document.querySelectorAll(paraClases+colorP6).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP6).forEach(el => el.remove());
 
             omenAbilities(colorP6);
 
@@ -1153,7 +1197,7 @@ window.onload = () => {
             agent6.className = '';
             agent6.classList.add("phoenix");
 
-            document.querySelectorAll(paraClases+colorP6).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP6).forEach(el => el.remove());
 
             phoenixAbilities(colorP6);
 
@@ -1161,7 +1205,7 @@ window.onload = () => {
             agent6.className = '';
             agent6.classList.add("raze");
 
-            document.querySelectorAll(paraClases+colorP6).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP6).forEach(el => el.remove());
 
             razeAbilities(colorP6);
 
@@ -1169,7 +1213,7 @@ window.onload = () => {
             agent6.className = '';
             agent6.classList.add("reyna");
 
-            document.querySelectorAll(paraClases+colorP6).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP6).forEach(el => el.remove());
 
             reynaAbilities(colorP6);
 
@@ -1177,7 +1221,7 @@ window.onload = () => {
             agent6.className = '';
             agent6.classList.add("sage");
 
-            document.querySelectorAll(paraClases+colorP6).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP6).forEach(el => el.remove());
 
             sageAbilities(colorP6);
 
@@ -1185,7 +1229,7 @@ window.onload = () => {
             agent6.className = '';
             agent6.classList.add("skye");
 
-            document.querySelectorAll(paraClases+colorP6).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP6).forEach(el => el.remove());
 
             skyeAbilities(colorP6);
 
@@ -1193,7 +1237,7 @@ window.onload = () => {
             agent6.className = '';
             agent6.classList.add("sova");
 
-            document.querySelectorAll(paraClases+colorP6).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP6).forEach(el => el.remove());
 
             sovaAbilities(colorP6);
 
@@ -1201,7 +1245,7 @@ window.onload = () => {
             agent6.className = '';
             agent6.classList.add("viper");
 
-            document.querySelectorAll(paraClases+colorP6).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP6).forEach(el => el.remove());
 
             viperAbilities(colorP6);
 
@@ -1209,7 +1253,7 @@ window.onload = () => {
             agent6.className = '';
             agent6.classList.add("yoru");
 
-            document.querySelectorAll(paraClases+colorP6).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP6).forEach(el => el.remove());
 
             yoruAbilities(colorP6);
         }
@@ -1224,7 +1268,7 @@ window.onload = () => {
             agent7.className = '';
             agent7.classList.add("astra");
 
-            document.querySelectorAll(paraClases+colorP7).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP7).forEach(el => el.remove());
 
             astraAbilities(colorP7);
 
@@ -1232,7 +1276,7 @@ window.onload = () => {
             agent7.className = '';
             agent7.classList.add("breach");
 
-            document.querySelectorAll(paraClases+colorP7).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP7).forEach(el => el.remove());
 
             breachAbilities(colorP7);
 
@@ -1240,7 +1284,7 @@ window.onload = () => {
             agent7.className = '';
             agent7.classList.add("brimstone");
 
-            document.querySelectorAll(paraClases+colorP7).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP7).forEach(el => el.remove());
 
             brimstoneAbilities(colorP7);
 
@@ -1248,7 +1292,7 @@ window.onload = () => {
             agent7.className = '';
             agent7.classList.add("cypher");
 
-            document.querySelectorAll(paraClases+colorP7).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP7).forEach(el => el.remove());
 
             cypherAbilities(colorP7);
 
@@ -1256,15 +1300,23 @@ window.onload = () => {
             agent7.className = '';
             agent7.classList.add("jett");
 
-            document.querySelectorAll(paraClases+colorP7).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP7).forEach(el => el.remove());
 
             jettAbilities(colorP7);
+
+        } else if (option7 === "kayo") {
+            agent7.className = '';
+            agent7.classList.add("kayo");
+
+            document.querySelectorAll(paraClases + colorP7).forEach(el => el.remove());
+
+            kayoAbilities(colorP7);
 
         } else if (option7 === "killjoy") {
             agent7.className = '';
             agent7.classList.add("killjoy");
 
-            document.querySelectorAll(paraClases+colorP7).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP7).forEach(el => el.remove());
 
             killjoyAbilities(colorP7);
 
@@ -1272,7 +1324,7 @@ window.onload = () => {
             agent7.className = '';
             agent7.classList.add("omen");
 
-            document.querySelectorAll(paraClases+colorP7).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP7).forEach(el => el.remove());
 
             omenAbilities(colorP7);
 
@@ -1280,7 +1332,7 @@ window.onload = () => {
             agent7.className = '';
             agent7.classList.add("phoenix");
 
-            document.querySelectorAll(paraClases+colorP7).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP7).forEach(el => el.remove());
 
             phoenixAbilities(colorP7);
 
@@ -1288,7 +1340,7 @@ window.onload = () => {
             agent7.className = '';
             agent7.classList.add("raze");
 
-            document.querySelectorAll(paraClases+colorP7).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP7).forEach(el => el.remove());
 
             razeAbilities(colorP7);
 
@@ -1296,7 +1348,7 @@ window.onload = () => {
             agent7.className = '';
             agent7.classList.add("reyna");
 
-            document.querySelectorAll(paraClases+colorP7).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP7).forEach(el => el.remove());
 
             reynaAbilities(colorP7);
 
@@ -1304,7 +1356,7 @@ window.onload = () => {
             agent7.className = '';
             agent7.classList.add("sage");
 
-            document.querySelectorAll(paraClases+colorP7).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP7).forEach(el => el.remove());
 
             sageAbilities(colorP7);
 
@@ -1312,7 +1364,7 @@ window.onload = () => {
             agent7.className = '';
             agent7.classList.add("skye");
 
-            document.querySelectorAll(paraClases+colorP7).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP7).forEach(el => el.remove());
 
             skyeAbilities(colorP7);
 
@@ -1320,7 +1372,7 @@ window.onload = () => {
             agent7.className = '';
             agent7.classList.add("sova");
 
-            document.querySelectorAll(paraClases+colorP7).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP7).forEach(el => el.remove());
 
             sovaAbilities(colorP7);
 
@@ -1328,7 +1380,7 @@ window.onload = () => {
             agent7.className = '';
             agent7.classList.add("viper");
 
-            document.querySelectorAll(paraClases+colorP7).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP7).forEach(el => el.remove());
 
             viperAbilities(colorP7);
 
@@ -1336,7 +1388,7 @@ window.onload = () => {
             agent7.className = '';
             agent7.classList.add("yoru");
 
-            document.querySelectorAll(paraClases+colorP7).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP7).forEach(el => el.remove());
 
             yoruAbilities(colorP7);
         }
@@ -1351,7 +1403,7 @@ window.onload = () => {
             agent8.className = '';
             agent8.classList.add("astra");
 
-            document.querySelectorAll(paraClases+colorP8).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP8).forEach(el => el.remove());
 
             astraAbilities(colorP8);
 
@@ -1359,7 +1411,7 @@ window.onload = () => {
             agent8.className = '';
             agent8.classList.add("breach");
 
-            document.querySelectorAll(paraClases+colorP8).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP8).forEach(el => el.remove());
 
             breachAbilities(colorP8);
 
@@ -1367,7 +1419,7 @@ window.onload = () => {
             agent8.className = '';
             agent8.classList.add("brimstone");
 
-            document.querySelectorAll(paraClases+colorP8).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP8).forEach(el => el.remove());
 
             brimstoneAbilities(colorP8);
 
@@ -1375,7 +1427,7 @@ window.onload = () => {
             agent8.className = '';
             agent8.classList.add("cypher");
 
-            document.querySelectorAll(paraClases+colorP8).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP8).forEach(el => el.remove());
 
             cypherAbilities(colorP8);
 
@@ -1383,15 +1435,23 @@ window.onload = () => {
             agent8.className = '';
             agent8.classList.add("jett");
 
-            document.querySelectorAll(paraClases+colorP8).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP8).forEach(el => el.remove());
 
             jettAbilities(colorP8);
+
+        } else if (option8 === "kayo") {
+            agent8.className = '';
+            agent8.classList.add("kayo");
+
+            document.querySelectorAll(paraClases + colorP8).forEach(el => el.remove());
+
+            kayoAbilities(colorP8);
 
         } else if (option8 === "killjoy") {
             agent8.className = '';
             agent8.classList.add("killjoy");
 
-            document.querySelectorAll(paraClases+colorP8).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP8).forEach(el => el.remove());
 
             killjoyAbilities(colorP8);
 
@@ -1399,7 +1459,7 @@ window.onload = () => {
             agent8.className = '';
             agent8.classList.add("omen");
 
-            document.querySelectorAll(paraClases+colorP8).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP8).forEach(el => el.remove());
 
             omenAbilities(colorP8);
 
@@ -1407,7 +1467,7 @@ window.onload = () => {
             agent8.className = '';
             agent8.classList.add("phoenix");
 
-            document.querySelectorAll(paraClases+colorP8).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP8).forEach(el => el.remove());
 
             phoenixAbilities(colorP8);
 
@@ -1415,7 +1475,7 @@ window.onload = () => {
             agent8.className = '';
             agent8.classList.add("raze");
 
-            document.querySelectorAll(paraClases+colorP8).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP8).forEach(el => el.remove());
 
             razeAbilities(colorP8);
 
@@ -1423,7 +1483,7 @@ window.onload = () => {
             agent8.className = '';
             agent8.classList.add("reyna");
 
-            document.querySelectorAll(paraClases+colorP8).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP8).forEach(el => el.remove());
 
             reynaAbilities(colorP8);
 
@@ -1431,7 +1491,7 @@ window.onload = () => {
             agent8.className = '';
             agent8.classList.add("sage");
 
-            document.querySelectorAll(paraClases+colorP8).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP8).forEach(el => el.remove());
 
             sageAbilities(colorP8);
 
@@ -1439,7 +1499,7 @@ window.onload = () => {
             agent8.className = '';
             agent8.classList.add("skye");
 
-            document.querySelectorAll(paraClases+colorP8).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP8).forEach(el => el.remove());
 
             skyeAbilities(colorP8);
 
@@ -1447,7 +1507,7 @@ window.onload = () => {
             agent8.className = '';
             agent8.classList.add("sova");
 
-            document.querySelectorAll(paraClases+colorP8).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP8).forEach(el => el.remove());
 
             sovaAbilities(colorP8);
 
@@ -1455,7 +1515,7 @@ window.onload = () => {
             agent8.className = '';
             agent8.classList.add("viper");
 
-            document.querySelectorAll(paraClases+colorP8).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP8).forEach(el => el.remove());
 
             viperAbilities(colorP8);
 
@@ -1463,7 +1523,7 @@ window.onload = () => {
             agent8.className = '';
             agent8.classList.add("yoru");
 
-            document.querySelectorAll(paraClases+colorP8).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP8).forEach(el => el.remove());
 
             yoruAbilities(colorP8);
         }
@@ -1478,7 +1538,7 @@ window.onload = () => {
             agent9.className = '';
             agent9.classList.add("astra");
 
-            document.querySelectorAll(paraClases+colorP9).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP9).forEach(el => el.remove());
 
             astraAbilities(colorP9);
 
@@ -1486,7 +1546,7 @@ window.onload = () => {
             agent9.className = '';
             agent9.classList.add("breach");
 
-            document.querySelectorAll(paraClases+colorP9).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP9).forEach(el => el.remove());
 
             breachAbilities(colorP9);
 
@@ -1494,7 +1554,7 @@ window.onload = () => {
             agent9.className = '';
             agent9.classList.add("brimstone");
 
-            document.querySelectorAll(paraClases+colorP9).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP9).forEach(el => el.remove());
 
             brimstoneAbilities(colorP9);
 
@@ -1502,7 +1562,7 @@ window.onload = () => {
             agent9.className = '';
             agent9.classList.add("cypher");
 
-            document.querySelectorAll(paraClases+colorP9).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP9).forEach(el => el.remove());
 
             cypherAbilities(colorP9);
 
@@ -1510,15 +1570,23 @@ window.onload = () => {
             agent9.className = '';
             agent9.classList.add("jett");
 
-            document.querySelectorAll(paraClases+colorP9).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP9).forEach(el => el.remove());
 
             jettAbilities(colorP9);
+
+        } else if (option9 === "kayo") {
+            agent9.className = '';
+            agent9.classList.add("kayo");
+
+            document.querySelectorAll(paraClases + colorP9).forEach(el => el.remove());
+
+            kayoAbilities(colorP9);
 
         } else if (option9 === "killjoy") {
             agent9.className = '';
             agent9.classList.add("killjoy");
 
-            document.querySelectorAll(paraClases+colorP9).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP9).forEach(el => el.remove());
 
             killjoyAbilities(colorP9);
 
@@ -1526,7 +1594,7 @@ window.onload = () => {
             agent9.className = '';
             agent9.classList.add("omen");
 
-            document.querySelectorAll(paraClases+colorP9).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP9).forEach(el => el.remove());
 
             omenAbilities(colorP9);
 
@@ -1534,7 +1602,7 @@ window.onload = () => {
             agent9.className = '';
             agent9.classList.add("phoenix");
 
-            document.querySelectorAll(paraClases+colorP9).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP9).forEach(el => el.remove());
 
             phoenixAbilities(colorP9);
 
@@ -1542,7 +1610,7 @@ window.onload = () => {
             agent9.className = '';
             agent9.classList.add("raze");
 
-            document.querySelectorAll(paraClases+colorP9).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP9).forEach(el => el.remove());
 
             razeAbilities(colorP9);
 
@@ -1550,7 +1618,7 @@ window.onload = () => {
             agent9.className = '';
             agent9.classList.add("reyna");
 
-            document.querySelectorAll(paraClases+colorP9).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP9).forEach(el => el.remove());
 
             reynaAbilities(colorP9);
 
@@ -1558,7 +1626,7 @@ window.onload = () => {
             agent9.className = '';
             agent9.classList.add("sage");
 
-            document.querySelectorAll(paraClases+colorP9).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP9).forEach(el => el.remove());
 
             sageAbilities(colorP9);
 
@@ -1566,7 +1634,7 @@ window.onload = () => {
             agent9.className = '';
             agent9.classList.add("skye");
 
-            document.querySelectorAll(paraClases+colorP9).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP9).forEach(el => el.remove());
 
             skyeAbilities(colorP9);
 
@@ -1574,7 +1642,7 @@ window.onload = () => {
             agent9.className = '';
             agent9.classList.add("sova");
 
-            document.querySelectorAll(paraClases+colorP9).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP9).forEach(el => el.remove());
 
             sovaAbilities(colorP9);
 
@@ -1582,7 +1650,7 @@ window.onload = () => {
             agent9.className = '';
             agent9.classList.add("viper");
 
-            document.querySelectorAll(paraClases+colorP9).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP9).forEach(el => el.remove());
 
             viperAbilities(colorP9);
 
@@ -1590,7 +1658,7 @@ window.onload = () => {
             agent9.className = '';
             agent9.classList.add("yoru");
 
-            document.querySelectorAll(paraClases+colorP9).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP9).forEach(el => el.remove());
 
             yoruAbilities(colorP9);
         }
@@ -1605,7 +1673,7 @@ window.onload = () => {
             agent10.className = '';
             agent10.classList.add("astra");
 
-            document.querySelectorAll(paraClases+colorP10).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP10).forEach(el => el.remove());
 
             astraAbilities(colorP10);
 
@@ -1613,7 +1681,7 @@ window.onload = () => {
             agent10.className = '';
             agent10.classList.add("breach");
 
-            document.querySelectorAll(paraClases+colorP10).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP10).forEach(el => el.remove());
 
             breachAbilities(colorP10);
 
@@ -1621,7 +1689,7 @@ window.onload = () => {
             agent10.className = '';
             agent10.classList.add("brimstone");
 
-            document.querySelectorAll(paraClases+colorP10).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP10).forEach(el => el.remove());
 
             brimstoneAbilities(colorP10);
 
@@ -1629,7 +1697,7 @@ window.onload = () => {
             agent10.className = '';
             agent10.classList.add("cypher");
 
-            document.querySelectorAll(paraClases+colorP10).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP10).forEach(el => el.remove());
 
             cypherAbilities(colorP10);
 
@@ -1637,15 +1705,23 @@ window.onload = () => {
             agent10.className = '';
             agent10.classList.add("jett");
 
-            document.querySelectorAll(paraClases+colorP10).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP10).forEach(el => el.remove());
 
             jettAbilities(colorP10);
+
+        } else if (option10 === "kayo") {
+            agent10.className = '';
+            agent10.classList.add("kayo");
+
+            document.querySelectorAll(paraClases + colorP10).forEach(el => el.remove());
+
+            kayoAbilities(colorP10);
 
         } else if (option10 === "killjoy") {
             agent10.className = '';
             agent10.classList.add("killjoy");
 
-            document.querySelectorAll(paraClases+colorP10).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP10).forEach(el => el.remove());
 
             killjoyAbilities(colorP10);
 
@@ -1653,7 +1729,7 @@ window.onload = () => {
             agent10.className = '';
             agent10.classList.add("omen");
 
-            document.querySelectorAll(paraClases+colorP10).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP10).forEach(el => el.remove());
 
             omenAbilities(colorP10);
 
@@ -1661,7 +1737,7 @@ window.onload = () => {
             agent10.className = '';
             agent10.classList.add("phoenix");
 
-            document.querySelectorAll(paraClases+colorP10).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP10).forEach(el => el.remove());
 
             phoenixAbilities(colorP10);
 
@@ -1669,7 +1745,7 @@ window.onload = () => {
             agent10.className = '';
             agent10.classList.add("raze");
 
-            document.querySelectorAll(paraClases+colorP10).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP10).forEach(el => el.remove());
 
             razeAbilities(colorP10);
 
@@ -1677,7 +1753,7 @@ window.onload = () => {
             agent10.className = '';
             agent10.classList.add("reyna");
 
-            document.querySelectorAll(paraClases+colorP10).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP10).forEach(el => el.remove());
 
             reynaAbilities(colorP10);
 
@@ -1685,7 +1761,7 @@ window.onload = () => {
             agent10.className = '';
             agent10.classList.add("sage");
 
-            document.querySelectorAll(paraClases+colorP10).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP10).forEach(el => el.remove());
 
             sageAbilities(colorP10);
 
@@ -1693,7 +1769,7 @@ window.onload = () => {
             agent10.className = '';
             agent10.classList.add("skye");
 
-            document.querySelectorAll(paraClases+colorP10).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP10).forEach(el => el.remove());
 
             skyeAbilities(colorP10);
 
@@ -1701,7 +1777,7 @@ window.onload = () => {
             agent10.className = '';
             agent10.classList.add("sova");
 
-            document.querySelectorAll(paraClases+colorP10).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP10).forEach(el => el.remove());
 
             sovaAbilities(colorP10);
 
@@ -1709,7 +1785,7 @@ window.onload = () => {
             agent10.className = '';
             agent10.classList.add("viper");
 
-            document.querySelectorAll(paraClases+colorP10).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP10).forEach(el => el.remove());
 
             viperAbilities(colorP10);
 
@@ -1717,12 +1793,27 @@ window.onload = () => {
             agent10.className = '';
             agent10.classList.add("yoru");
 
-            document.querySelectorAll(paraClases+colorP10).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + colorP10).forEach(el => el.remove());
 
             yoruAbilities(colorP10);
         }
     });
+
+    class Agent {
+        constructor(type, name, q, e, c, x) {
+            this.type = type;
+            this.name = name;
+            this.q = q;
+            this.e = e;
+            this.c = c;
+            this.x = x;
+        }
+    }
+
+
+
 }
+
 
 
 
