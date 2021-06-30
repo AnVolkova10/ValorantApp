@@ -48,7 +48,7 @@ window.onload = () => {
     let suppressionE = document.querySelector(".suppressionE");
     let detainE = document.querySelector(".detainE");
 
-    // Player
+    // Player's color
     let colorP1 = "blue";
     let colorP2 = "red";
     let colorP3 = "green";
@@ -60,7 +60,7 @@ window.onload = () => {
     let colorP9 = "khaki";
     let colorP10 = "lightpink";
 
-    // Adding Points
+    // Adding Points        (acá player tiene que ser colorA1) //   player = color del player/player número x
     function addPoint(ability, player) {
         let point = document.createElement("div");
 
@@ -69,7 +69,7 @@ window.onload = () => {
         point.className = player;
     }
 
-    // Probando Clases
+    // Classes              add atribute: country/region
     class Agent {
         constructor(name, variable, clase, color, q, e, c, x) {
             this.name = name;
@@ -82,13 +82,13 @@ window.onload = () => {
             this.x = x;
         }
 
-        ability(player){
-            
+        ability(player) {
+
         }
     }
 
     class Astra extends Agent {
-        
+
         ability(player) {
             if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
                 addPoint(smoke, player);
@@ -97,7 +97,7 @@ window.onload = () => {
                 addPoint(obstacle, player);
                 addPoint(slow, player);
                 addPoint(daze, player);
-            } else {
+            } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
                 addPoint(smokeE, player);
                 addPoint(smokeE, player);
                 addPoint(vulnerableE, player);
@@ -108,385 +108,401 @@ window.onload = () => {
         }
 
     }
+    class Breach extends Agent {
 
+        ability(player) {
+            if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
+                addPoint(flash, player);
+                addPoint(flash, player);
+                addPoint(daze, player);
+                addPoint(daze, player);
+                addPoint(dmgExpl, player);
+            } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
+                addPoint(flashE, player);
+                addPoint(flashE, player);
+                addPoint(dazeE, player);
+                addPoint(dazeE, player);
+                addPoint(dmgExplE, player);
+            }
+        }
+
+    }
+    class Brimstone extends Agent {
+
+        ability(player) {
+            if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
+                addPoint(smoke, player);
+                addPoint(smoke, player);
+                addPoint(smoke, player);
+                addPoint(dmgExpl, player);
+                addPoint(dmgArea, player);
+                addPoint(rapidFire, player);
+                addPoint(rapidFire, player);
+            } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
+                addPoint(smokeE, player);
+                addPoint(smokeE, player);
+                addPoint(smokeE, player);
+                addPoint(dmgExplE, player);
+                addPoint(dmgAreaE, player);
+                addPoint(rapidFireE, player);
+                addPoint(rapidFireE, player);
+            }
+        }
+
+    }
+    class Cypher extends Agent {
+
+        ability(player) {
+            if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
+                addPoint(smoke, player);
+                addPoint(obstacle, player);
+                addPoint(slow, player);
+                addPoint(daze, player);
+                addPoint(track, player);
+                addPoint(track, player);
+                addPoint(reveal, player);
+                addPoint(reveal, player);
+                addPoint(reveal, player);
+            } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
+                addPoint(smokeE, player);
+                addPoint(obstacleE, player);
+                addPoint(slowE, player);
+                addPoint(dazeE, player);
+                addPoint(trackE, player);
+                addPoint(trackE, player);
+                addPoint(revealE, player);
+                addPoint(revealE, player);
+                addPoint(revealE, player);
+            }
+        }
+
+    }
+    class Jett extends Agent {
+
+        ability(player) {
+            if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
+                addPoint(smoke, player);
+                addPoint(dmgExpl, player);
+                addPoint(dmgExpl, player);
+                addPoint(movability, player);
+                addPoint(movability, player);
+                addPoint(movability, player);
+            } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
+                addPoint(smokeE, player);
+                addPoint(dmgExplE, player);
+                addPoint(dmgExplE, player);
+                addPoint(movabilityE, player);
+                addPoint(movabilityE, player);
+                addPoint(movabilityE, player);
+            }
+        }
+
+    }
+    class Kayo extends Agent {
+
+        ability(player) {
+            if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
+                addPoint(flash, player);
+                addPoint(flash, player);
+                addPoint(dmgArea, player);
+                addPoint(suppression, player);
+                addPoint(suppression, player);
+                addPoint(track, player);
+                addPoint(revive, player);
+                addPoint(rapidFire, player);
+            } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
+                addPoint(flashE, player);
+                addPoint(flashE, player);
+                addPoint(dmgAreaE, player);
+                addPoint(suppressionE, player);
+                addPoint(suppressionE, player);
+                addPoint(trackE, player);
+                addPoint(reviveE, player);
+                addPoint(rapidFireE, player);
+            }
+        }
+
+    }
+    class Killjoy extends Agent {
+
+        ability(player) {
+            if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
+                addPoint(vulnerable, player);
+                addPoint(obstacle, player);
+                addPoint(obstacle, player);
+                addPoint(slow, player);
+                addPoint(track, player);
+                addPoint(track, player);
+                addPoint(track, player);
+                addPoint(dmgExpl, player);
+                addPoint(dmgArea, player);
+                addPoint(dmgArea, player);
+                addPoint(detain, player);
+            } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
+                addPoint(vulnerableE, player);
+                addPoint(obstacleE, player);
+                addPoint(obstacleE, player);
+                addPoint(slowE, player);
+                addPoint(trackE, player);
+                addPoint(trackE, player);
+                addPoint(trackE, player);
+                addPoint(dmgExplE, player);
+                addPoint(dmgAreaE, player);
+                addPoint(dmgAreaE, player);
+                addPoint(detainE, player);
+            }
+        }
+
+    }
+    class Omen extends Agent {
+
+        ability(player) {
+            if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
+                addPoint(smoke, player);
+                addPoint(smoke, player);
+                addPoint(blind, player);
+                addPoint(track, player);
+                addPoint(teleport, player);
+                addPoint(movability, player);
+                addPoint(movability, player);
+            } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
+                addPoint(smokeE, player);
+                addPoint(smokeE, player);
+                addPoint(blindE, player);
+                addPoint(trackE, player);
+                addPoint(teleportE, player);
+                addPoint(movabilityE, player);
+                addPoint(movabilityE, player);
+            }
+        }
+
+    }
+    class Phoenix extends Agent {
+
+        ability(player) {
+            if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
+                addPoint(screen, player);
+                addPoint(flash, player);
+                addPoint(flash, player);
+                addPoint(healSelf, player);
+                addPoint(healSelf, player);
+                addPoint(healSelf, player);
+                addPoint(revive, player);
+                addPoint(dmgExpl, player);
+                addPoint(dmgArea, player);
+                addPoint(movability, player);
+            } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
+                addPoint(screenE, player);
+                addPoint(flashE, player);
+                addPoint(flashE, player);
+                addPoint(healSelfE, player);
+                addPoint(healSelfE, player);
+                addPoint(healSelfE, player);
+                addPoint(reviveE, player);
+                addPoint(dmgExplE, player);
+                addPoint(dmgAreaE, player);
+                addPoint(movabilityE, player);
+            }
+        }
+
+    }
+    class Raze extends Agent {
+
+        ability(player) {
+            if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
+                addPoint(dmgExpl, player);
+                addPoint(dmgExpl, player);
+                addPoint(dmgExpl, player);
+                addPoint(dmgExpl, player);
+                addPoint(track, player);
+                addPoint(movability, player);
+                addPoint(movability, player);
+            } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
+                addPoint(dmgExplE, player);
+                addPoint(dmgExplE, player);
+                addPoint(dmgExplE, player);
+                addPoint(dmgExplE, player);
+                addPoint(trackE, player);
+                addPoint(movabilityE, player);
+                addPoint(movabilityE, player);
+            }
+        }
+
+    }
+    class Reyna extends Agent {
+
+        ability(player) {
+            if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
+                addPoint(blind, player);
+                addPoint(blind, player);
+                addPoint(healSelf, player);
+                addPoint(healSelf, player);
+                addPoint(rapidFire, player);
+                addPoint(movability, player);
+                addPoint(movability, player);
+            } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
+                addPoint(blindE, player);
+                addPoint(blindE, player);
+                addPoint(healSelfE, player);
+                addPoint(healSelfE, player);
+                addPoint(rapidFireE, player);
+                addPoint(movabilityE, player);
+                addPoint(movabilityE, player);
+            }
+        }
+
+    }
+    class Sage extends Agent {
+
+        ability(player) {
+            if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
+                addPoint(obstacle, player);
+                addPoint(slow, player);
+                addPoint(slow, player);
+                addPoint(heal, player);
+                addPoint(revive, player);
+                addPoint(healSelf, player);
+            } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
+                addPoint(obstacleE, player);
+                addPoint(slowE, player);
+                addPoint(slowE, player);
+                addPoint(healE, player);
+                addPoint(reviveE, player);
+                addPoint(healSelfE, player);
+            }
+        }
+
+    }
+    class Skye extends Agent {
+
+        ability(player) {
+            if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
+                addPoint(flash, player);
+                addPoint(flash, player);
+                addPoint(blind, player);
+                addPoint(heal, player);
+                addPoint(concussion, player);
+                addPoint(track, player);
+                addPoint(track, player);
+                addPoint(track, player);
+            } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
+                addPoint(flashE, player);
+                addPoint(flashE, player);
+                addPoint(blindE, player);
+                addPoint(healE, player);
+                addPoint(concussionE, player);
+                addPoint(trackE, player);
+                addPoint(trackE, player);
+                addPoint(trackE, player);
+            }
+        }
+
+    }
+    class Sova extends Agent {
+
+        ability(player) {
+            if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
+                addPoint(track, player);
+                addPoint(track, player);
+                addPoint(reveal, player);
+                addPoint(reveal, player);
+                addPoint(reveal, player);
+                addPoint(dmgExpl, player);
+                addPoint(dmgExpl, player);
+                addPoint(dmgExpl, player);
+            } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
+                addPoint(trackE, player);
+                addPoint(trackE, player);
+                addPoint(revealE, player);
+                addPoint(revealE, player);
+                addPoint(revealE, player);
+                addPoint(dmgExplE, player);
+                addPoint(dmgExplE, player);
+                addPoint(dmgExplE, player);
+            }
+        }
+
+    }
+    class Viper extends Agent {
+
+        ability(player) {
+            if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
+                addPoint(smoke, player);
+                addPoint(smoke, player);
+                addPoint(screen, player);
+                addPoint(slow, player);
+                addPoint(obstacle, player);
+                addPoint(dmgExpl, player);
+                addPoint(dmgExpl, player);
+                addPoint(dmgArea, player);
+                addPoint(dmgArea, player);
+            } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
+                addPoint(smokeE, player);
+                addPoint(smokeE, player);
+                addPoint(screenE, player);
+                addPoint(slowE, player);
+                addPoint(obstacleE, player);
+                addPoint(dmgExplE, player);
+                addPoint(dmgExplE, player);
+                addPoint(dmgAreaE, player);
+                addPoint(dmgAreaE, player);
+            }
+        }
+
+    }
+    class Yoru extends Agent {
+
+        ability(player) {
+            if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
+                addPoint(flash, player);
+                addPoint(flash, player);
+                addPoint(track, player);
+                addPoint(track, player);
+                addPoint(teleport, player);
+                addPoint(teleport, player);
+                addPoint(movability, player);
+                addPoint(movability, player);
+                addPoint(decoy, player);
+                addPoint(decoy, player);
+                addPoint(decoy, player);
+            } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
+                addPoint(flashE, player);
+                addPoint(flashE, player);
+                addPoint(trackE, player);
+                addPoint(trackE, player);
+                addPoint(teleportE, player);
+                addPoint(teleportE, player);
+                addPoint(movabilityE, player);
+                addPoint(movabilityE, player);
+                addPoint(decoyE, player);
+                addPoint(decoyE, player);
+                addPoint(decoyE, player);
+            }
+        }
+
+    }
+
+    // Players - Objects
     let astra = new Astra("Astra", "astra", "Controller", "#5A2EBD", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let breach = new Breach("Breach", "breach", "Initiator", "#995926", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let brimstone = new Brimstone("Brimstone", "brimstone", "Controller", "#BD4200", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let cypher = new Cypher("Cypher", "cypher", "Sentinel", "#3EF2F9", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let jett = new Jett("Jett", "jett", "Duelist", "#B9C3D9", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let kayo = new Kayo("KAY/O", "kayo", "Initiator", "#1F398B", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let killjoy = new Killjoy("Killjoy", "killjoy", "Sentinel", "#FBDB32", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let omen = new Omen("Omen", "omen", "Controller", "#5857CC", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let phoenix = new Phoenix("Phoenix", "phoenix", "Duelist", "#FBAC4F", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let raze = new Raze("Raze", "raze", "Duelist", "#E06739", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let reyna = new Reyna("Reyna", "reyna", "Duelist", "#9B3587", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let sage = new Sage("Sage", "sage", "Duelist", "#36E4C4", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let skye = new Skye("Skye", "skye", "Initiator", "#4F6539", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let sova = new Sova("Sova", "sova", "Initiator", "#3C598D", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let viper = new Viper("Viper", "viper", "Controller", "#0ED534", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let yoru = new Yoru("Yoru", "yoru", "Duelist", "#0306A5", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
 
-     //Agent's Abilities   
-    function astraAbilities(player) {
-        if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-            addPoint(smoke, player);
-            addPoint(smoke, player);
-            addPoint(vulnerable, player);
-            addPoint(obstacle, player);
-            addPoint(slow, player);
-            addPoint(daze, player);
-        } else {
-            addPoint(smokeE, player);
-            addPoint(smokeE, player);
-            addPoint(vulnerableE, player);
-            addPoint(obstacleE, player);
-            addPoint(slowE, player);
-            addPoint(dazeE, player);
-        }
 
-    }
-    function breachAbilities(player) {
-        if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-            addPoint(flash, player);
-            addPoint(flash, player);
-            addPoint(daze, player);
-            addPoint(daze, player);
-            addPoint(dmgExpl, player);
-
-        } else {
-            addPoint(flashE, player);
-            addPoint(flashE, player);
-            addPoint(dazeE, player);
-            addPoint(dazeE, player);
-            addPoint(dmgExplE, player);
-
-        }
-
-    }
-    function brimstoneAbilities(player) {
-        if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-            addPoint(smoke, player);
-            addPoint(smoke, player);
-            addPoint(smoke, player);
-            addPoint(dmgExpl, player);
-            addPoint(dmgArea, player);
-            addPoint(rapidFire, player);
-            addPoint(rapidFire, player);
-
-        } else {
-            addPoint(smokeE, player);
-            addPoint(smokeE, player);
-            addPoint(smokeE, player);
-            addPoint(dmgExplE, player);
-            addPoint(dmgAreaE, player);
-            addPoint(rapidFireE, player);
-            addPoint(rapidFireE, player);
-
-        }
-
-    }
-    function cypherAbilities(player) {
-        if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-            addPoint(smoke, player);
-            addPoint(obstacle, player);
-            addPoint(slow, player);
-            addPoint(daze, player);
-            addPoint(track, player);
-            addPoint(track, player);
-            addPoint(reveal, player);
-            addPoint(reveal, player);
-            addPoint(reveal, player);
-
-        } else {
-            addPoint(smokeE, player);
-            addPoint(obstacleE, player);
-            addPoint(slowE, player);
-            addPoint(dazeE, player);
-            addPoint(trackE, player);
-            addPoint(trackE, player);
-            addPoint(revealE, player);
-            addPoint(revealE, player);
-            addPoint(revealE, player);
-
-        }
-    }
-    function jettAbilities(player) {
-        if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-            addPoint(smoke, player);
-            addPoint(dmgExpl, player);
-            addPoint(dmgExpl, player);
-            addPoint(movability, player);
-            addPoint(movability, player);
-            addPoint(movability, player);
-
-        } else {
-            addPoint(smokeE, player);
-            addPoint(dmgExplE, player);
-            addPoint(dmgExplE, player);
-            addPoint(movabilityE, player);
-            addPoint(movabilityE, player);
-            addPoint(movabilityE, player);
-
-        }
-
-    }
-    function kayoAbilities(player) {
-        if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-            addPoint(flash, player);
-            addPoint(flash, player);
-            addPoint(dmgArea, player);
-            addPoint(suppression, player);
-            addPoint(suppression, player);
-            addPoint(track, player);
-            addPoint(revive, player);
-            addPoint(rapidFire, player);
-        } else {
-            addPoint(flashE, player);
-            addPoint(flashE, player);
-            addPoint(dmgAreaE, player);
-            addPoint(suppressionE, player);
-            addPoint(suppressionE, player);
-            addPoint(trackE, player);
-            addPoint(reviveE, player);
-            addPoint(rapidFireE, player);
-        }
-
-    }
-    function killjoyAbilities(player) {
-        if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-            addPoint(vulnerable, player);
-            addPoint(obstacle, player);
-            addPoint(obstacle, player);
-            addPoint(slow, player);
-            addPoint(track, player);
-            addPoint(track, player);
-            addPoint(track, player);
-            addPoint(dmgExpl, player);
-            addPoint(dmgArea, player);
-            addPoint(dmgArea, player);
-            addPoint(detain, player);
-
-        } else {
-            addPoint(vulnerableE, player);
-            addPoint(obstacleE, player);
-            addPoint(obstacleE, player);
-            addPoint(slowE, player);
-            addPoint(trackE, player);
-            addPoint(trackE, player);
-            addPoint(trackE, player);
-            addPoint(dmgExplE, player);
-            addPoint(dmgAreaE, player);
-            addPoint(dmgAreaE, player);
-            addPoint(detainE, player);
-
-        }
-
-    }
-    function omenAbilities(player) {
-        if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-            addPoint(smoke, player);
-            addPoint(smoke, player);
-            addPoint(blind, player);
-            addPoint(track, player);
-            addPoint(teleport, player);
-            addPoint(movability, player);
-            addPoint(movability, player);
-
-        } else {
-            addPoint(smokeE, player);
-            addPoint(smokeE, player);
-            addPoint(blindE, player);
-            addPoint(trackE, player);
-            addPoint(teleportE, player);
-            addPoint(movabilityE, player);
-            addPoint(movabilityE, player);
-
-        }
-
-    }
-    function phoenixAbilities(player) {
-        if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-            addPoint(screen, player);
-            addPoint(flash, player);
-            addPoint(flash, player);
-            addPoint(healSelf, player);
-            addPoint(healSelf, player);
-            addPoint(healSelf, player);
-            addPoint(revive, player);
-            addPoint(dmgExpl, player);
-            addPoint(dmgArea, player);
-            addPoint(movability, player);
-
-        } else {
-            addPoint(screenE, player);
-            addPoint(flashE, player);
-            addPoint(flashE, player);
-            addPoint(healSelfE, player);
-            addPoint(healSelfE, player);
-            addPoint(healSelfE, player);
-            addPoint(reviveE, player);
-            addPoint(dmgExplE, player);
-            addPoint(dmgAreaE, player);
-            addPoint(movabilityE, player);
-
-        }
-
-    }
-    function razeAbilities(player) {
-        if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-            addPoint(dmgExpl, player);
-            addPoint(dmgExpl, player);
-            addPoint(dmgExpl, player);
-            addPoint(dmgExpl, player);
-            addPoint(track, player);
-            addPoint(movability, player);
-            addPoint(movability, player);
-
-        } else {
-            addPoint(dmgExplE, player);
-            addPoint(dmgExplE, player);
-            addPoint(dmgExplE, player);
-            addPoint(dmgExplE, player);
-            addPoint(track, player);
-            addPoint(movabilityE, player);
-            addPoint(movabilityE, player);
-
-        }
-
-    }
-    function reynaAbilities(player) {
-        if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-            addPoint(blind, player);
-            addPoint(blind, player);
-            addPoint(healSelf, player);
-            addPoint(healSelf, player);
-            addPoint(rapidFire, player);
-            addPoint(movability, player);
-            addPoint(movability, player);
-
-        } else {
-            addPoint(blindE, player);
-            addPoint(blindE, player);
-            addPoint(healSelfE, player);
-            addPoint(healSelfE, player);
-            addPoint(rapidFireE, player);
-            addPoint(movabilityE, player);
-            addPoint(movabilityE, player);
-
-        }
-
-    }
-    function sageAbilities(player) {
-        if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-            addPoint(obstacle, player);
-            addPoint(slow, player);
-            addPoint(slow, player);
-            addPoint(heal, player);
-            addPoint(revive, player);
-            addPoint(healSelf, player);
-
-        } else {
-            addPoint(obstacleE, player);
-            addPoint(slowE, player);
-            addPoint(slowE, player);
-            addPoint(healE, player);
-            addPoint(reviveE, player);
-            addPoint(healSelfE, player);
-
-        }
-
-    }
-    function skyeAbilities(player) {
-        if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-            addPoint(flash, player);
-            addPoint(flash, player);
-            addPoint(blind, player);
-            addPoint(heal, player);
-            addPoint(concussion, player);
-            addPoint(track, player);
-            addPoint(track, player);
-            addPoint(track, player);
-
-        } else {
-            addPoint(flashE, player);
-            addPoint(flashE, player);
-            addPoint(blindE, player);
-            addPoint(healE, player);
-            addPoint(concussionE, player);
-            addPoint(trackE, player);
-            addPoint(trackE, player);
-            addPoint(trackE, player);
-
-        }
-
-    }
-    function sovaAbilities(player) {
-        if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-            addPoint(track, player);
-            addPoint(track, player);
-            addPoint(reveal, player);
-            addPoint(reveal, player);
-            addPoint(reveal, player);
-            addPoint(dmgExpl, player);
-            addPoint(dmgExpl, player);
-            addPoint(dmgExpl, player);
-
-        } else {
-            addPoint(trackE, player);
-            addPoint(trackE, player);
-            addPoint(revealE, player);
-            addPoint(revealE, player);
-            addPoint(revealE, player);
-            addPoint(dmgExplE, player);
-            addPoint(dmgExplE, player);
-            addPoint(dmgExplE, player);
-
-        }
-
-    }
-    function viperAbilities(player) {
-        if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-            addPoint(smoke, player);
-            addPoint(smoke, player);
-            addPoint(screen, player);
-            addPoint(slow, player);
-            addPoint(obstacle, player);
-            addPoint(dmgExpl, player);
-            addPoint(dmgExpl, player);
-            addPoint(dmgArea, player);
-            addPoint(dmgArea, player);
-
-        } else {
-            addPoint(smokeE, player);
-            addPoint(smokeE, player);
-            addPoint(screenE, player);
-            addPoint(slowE, player);
-            addPoint(obstacleE, player);
-            addPoint(dmgExplE, player);
-            addPoint(dmgExplE, player);
-            addPoint(dmgAreaE, player);
-            addPoint(dmgAreaE, player);
-
-        }
-
-    }
-    function yoruAbilities(player) {
-        if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-
-            addPoint(flash, player);
-            addPoint(flash, player);
-            addPoint(track, player);
-            addPoint(track, player);
-            addPoint(teleport, player);
-            addPoint(teleport, player);
-            addPoint(movability, player);
-            addPoint(movability, player);
-            addPoint(decoy, player);
-            addPoint(decoy, player);
-            addPoint(decoy, player);
-
-        } else {
-            addPoint(flashE, player);
-            addPoint(flashE, player);
-            addPoint(trackE, player);
-            addPoint(trackE, player);
-            addPoint(teleportE, player);
-            addPoint(teleportE, player);
-            addPoint(movabilityE, player);
-            addPoint(movabilityE, player);
-            addPoint(decoyE, player);
-            addPoint(decoyE, player);
-            addPoint(decoyE, player);
-
-        }
-
-    }
-    function agentSelection(option, agent, player){
+    // Agent Selection
+    function agentSelection(option, agent, player) {
         if (option === "astra") {
             agent.className = '';
             agent.classList.add("astra");
@@ -501,7 +517,7 @@ window.onload = () => {
 
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
-            breachAbilities(player);
+            breach.ability(player);
 
         } else if (option === "brimstone") {
             agent.className = '';
@@ -509,7 +525,7 @@ window.onload = () => {
 
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
-            brimstoneAbilities(player);
+            brimstone.ability(player);
 
         } else if (option === "cypher") {
             agent.className = '';
@@ -517,7 +533,7 @@ window.onload = () => {
 
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
-            cypherAbilities(player);
+            cypher.ability(player);
 
         } else if (option === "jett") {
             agent.className = '';
@@ -525,15 +541,15 @@ window.onload = () => {
 
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
-            jettAbilities(player);
+            jett.ability(player);
 
         } else if (option === "kayo") {
             agent.className = '';
             agent.classList.add("kayo");
 
-            document.querySelectorAll(paraClases + colorP2).forEach(el => el.remove());
+            document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
-            kayoAbilities(colorP2);
+            kayo.ability(player);
 
         } else if (option === "killjoy") {
             agent.className = '';
@@ -541,7 +557,7 @@ window.onload = () => {
 
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
-            killjoyAbilities(player);
+            killjoy.ability(player);
 
         } else if (option === "omen") {
             agent.className = '';
@@ -549,7 +565,7 @@ window.onload = () => {
 
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
-            omenAbilities(player);
+            omen.ability(player);
 
         } else if (option === "phoenix") {
             agent.className = '';
@@ -557,7 +573,7 @@ window.onload = () => {
 
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
-            phoenixAbilities(player);
+            phoenix.ability(player);
 
         } else if (option === "raze") {
             agent.className = '';
@@ -565,7 +581,7 @@ window.onload = () => {
 
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
-            razeAbilities(player);
+            raze.ability(player);
 
         } else if (option === "reyna") {
             agent.className = '';
@@ -573,7 +589,7 @@ window.onload = () => {
 
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
-            reynaAbilities(player);
+            reyna.ability(player);
 
         } else if (option === "sage") {
             agent.className = '';
@@ -581,7 +597,7 @@ window.onload = () => {
 
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
-            sageAbilities(player);
+            sage.ability(player);
 
         } else if (option === "skye") {
             agent.className = '';
@@ -589,7 +605,7 @@ window.onload = () => {
 
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
-            skyeAbilities(player);
+            skye.ability(player);
 
         } else if (option === "sova") {
             agent.className = '';
@@ -597,7 +613,7 @@ window.onload = () => {
 
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
-            sovaAbilities(player);
+            sova.ability(player);
 
         } else if (option === "viper") {
             agent.className = '';
@@ -605,7 +621,7 @@ window.onload = () => {
 
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
-            viperAbilities(player);
+            viper.ability(player);
 
         } else if (option === "yoru") {
             agent.className = '';
@@ -613,7 +629,7 @@ window.onload = () => {
 
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
-            yoruAbilities(player);
+            yoru.ability(player);
         } else {
             agent.className = '';
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
@@ -622,12 +638,13 @@ window.onload = () => {
     }
 
     //Player selects an Agent, adds certain points to abilities
+    let paraClases = ".";
+
+
     let agent1 = document.querySelector("#agent1");
     let player1 = document.querySelector("#player1");
-    let paraClases = ".";
     player1.addEventListener('change', function () {
         let option1 = this.options[this.selectedIndex].value;
-
         agentSelection(option1, agent1, colorP1);
     });
 
@@ -635,9 +652,7 @@ window.onload = () => {
     let player2 = document.querySelector("#player2");
     player2.addEventListener('change', function () {
         let option2 = this.options[this.selectedIndex].value;
-
         agentSelection(option2, agent2, colorP2);
-
     });
 
     let agent3 = document.querySelector("#agent3");
