@@ -17,7 +17,11 @@ body {
 
 nav {
     display: flex;
+    height: 35vh;
     
+}
+h1 {
+    text-align: center;
 }
 aside {
     background-color: #3b3b3b;
@@ -158,13 +162,22 @@ aside section {
 
 
 /* STRATEGY */
-main {
+.basic {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color:#ffffff;
-    height: 50vh;
+    height: 40vh;
 }
+.advanced {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color:#ffffff;
+    height: 85vh;
+}
+
+
 
 main section {
     height: 30px;

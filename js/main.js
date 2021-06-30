@@ -86,7 +86,6 @@ window.onload = () => {
 
         }
     }
-
     class Astra extends Agent {
 
         ability(player) {
@@ -482,7 +481,7 @@ window.onload = () => {
 
     }
 
-    // Players - Objects
+    // Agents - Objects
     let astra = new Astra("Astra", "astra", "Controller", "#5A2EBD", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
     let breach = new Breach("Breach", "breach", "Initiator", "#995926", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
     let brimstone = new Brimstone("Brimstone", "brimstone", "Controller", "#BD4200", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
@@ -719,4 +718,20 @@ window.onload = () => {
 
         agentSelection(option10, agent10, colorP10);
     });
+
+    // Basic - Advanced Section
+    let basic = document.querySelector(".basic");
+    let advanced = document.querySelector(".advanced");
+    let basicAdvanced = document.querySelector(".basicAdvanced");
+    let btnBasicAdvanced = document.querySelector(".btnBasicAdvanced");
+    btnBasicAdvanced.addEventListener('click', function() {
+        if (basic.style.display === "flex") {
+            basic.style.display = "none";
+            advanced.style.display = "flex";
+        } else {
+            basic.style.display = "flex";
+            advanced.style.display = "none";
+        }
+        
+    })
 }
