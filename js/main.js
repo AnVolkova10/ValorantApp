@@ -1,52 +1,52 @@
 window.onload = () => {
 
     //Allied Abilities
-    let smoke = document.querySelector(".smoke");
-    let screen = document.querySelector(".screen");
-    let flash = document.querySelector(".flash");
-    let blind = document.querySelector(".blind");
-    let obstacle = document.querySelector(".obstacle");
-    let slow = document.querySelector(".slow");
-    let daze = document.querySelector(".daze");
-    let heal = document.querySelector(".heal");
-    let healSelf = document.querySelector(".healSelf");
-    let track = document.querySelector(".track");
-    let reveal = document.querySelector(".reveal");
-    let dmgExpl = document.querySelector(".dmgExpl");
-    let dmgArea = document.querySelector(".dmgArea");
-    let teleport = document.querySelector(".teleport");
-    let movability = document.querySelector(".movability");
-    let rapidFire = document.querySelector(".rapidFire");
-    let concussion = document.querySelector(".concussion");
-    let revive = document.querySelector(".revive");
-    let decoy = document.querySelector(".decoy");
-    let vulnerable = document.querySelector(".vulnerable");
-    let suppression = document.querySelector(".suppression");
-    let detain = document.querySelector(".detain");
+    let smoke = document.querySelectorAll(".smoke");
+    let screen = document.querySelectorAll(".screen");
+    let flash = document.querySelectorAll(".flash");
+    let blind = document.querySelectorAll(".blind");
+    let obstacle = document.querySelectorAll(".obstacle");
+    let slow = document.querySelectorAll(".slow");
+    let daze = document.querySelectorAll(".daze");
+    let heal = document.querySelectorAll(".heal");
+    let healSelf = document.querySelectorAll(".healSelf");
+    let track = document.querySelectorAll(".track");
+    let reveal = document.querySelectorAll(".reveal");
+    let dmgExpl = document.querySelectorAll(".dmgExpl");
+    let dmgArea = document.querySelectorAll(".dmgArea");
+    let teleport = document.querySelectorAll(".teleport");
+    let movability = document.querySelectorAll(".movability");
+    let rapidFire = document.querySelectorAll(".rapidFire");
+    let concussion = document.querySelectorAll(".concussion");
+    let revive = document.querySelectorAll(".revive");
+    let decoy = document.querySelectorAll(".decoy");
+    let vulnerable = document.querySelectorAll(".vulnerable");
+    let suppression = document.querySelectorAll(".suppression");
+    let detain = document.querySelectorAll(".detain");
 
     // Enemy Abilities
-    let smokeE = document.querySelector(".smokeE");
-    let screenE = document.querySelector(".screenE");
-    let flashE = document.querySelector(".flashE");
-    let blindE = document.querySelector(".blindE");
-    let obstacleE = document.querySelector(".obstacleE");
-    let slowE = document.querySelector(".slowE");
-    let dazeE = document.querySelector(".dazeE");
-    let healE = document.querySelector(".healE");
-    let healSelfE = document.querySelector(".healSelfE");
-    let trackE = document.querySelector(".trackE");
-    let revealE = document.querySelector(".revealE");
-    let dmgExplE = document.querySelector(".dmgExplE");
-    let dmgAreaE = document.querySelector(".dmgAreaE");
-    let teleportE = document.querySelector(".teleportE");
-    let movabilityE = document.querySelector(".movabilityE");
-    let rapidFireE = document.querySelector(".rapidFireE");
-    let concussionE = document.querySelector(".concussionE");
-    let reviveE = document.querySelector(".reviveE");
-    let decoyE = document.querySelector(".decoyE");
-    let vulnerableE = document.querySelector(".vulnerableE");
-    let suppressionE = document.querySelector(".suppressionE");
-    let detainE = document.querySelector(".detainE");
+    let smokeE = document.querySelectorAll(".smokeE");
+    let screenE = document.querySelectorAll(".screenE");
+    let flashE = document.querySelectorAll(".flashE");
+    let blindE = document.querySelectorAll(".blindE");
+    let obstacleE = document.querySelectorAll(".obstacleE");
+    let slowE = document.querySelectorAll(".slowE");
+    let dazeE = document.querySelectorAll(".dazeE");
+    let healE = document.querySelectorAll(".healE");
+    let healSelfE = document.querySelectorAll(".healSelfE");
+    let trackE = document.querySelectorAll(".trackE");
+    let revealE = document.querySelectorAll(".revealE");
+    let dmgExplE = document.querySelectorAll(".dmgExplE");
+    let dmgAreaE = document.querySelectorAll(".dmgAreaE");
+    let teleportE = document.querySelectorAll(".teleportE");
+    let movabilityE = document.querySelectorAll(".movabilityE");
+    let rapidFireE = document.querySelectorAll(".rapidFireE");
+    let concussionE = document.querySelectorAll(".concussionE");
+    let reviveE = document.querySelectorAll(".reviveE");
+    let decoyE = document.querySelectorAll(".decoyE");
+    let vulnerableE = document.querySelectorAll(".vulnerableE");
+    let suppressionE = document.querySelectorAll(".suppressionE");
+    let detainE = document.querySelectorAll(".detainE");
 
     // Player's color
     let colorP1 = "blue";
@@ -62,11 +62,18 @@ window.onload = () => {
 
     // Adding Points        (acá player tiene que ser colorA1) //   player = color del player/player número x
     function addPoint(ability, player) {
-        let point = document.createElement("div");
+        
 
-        ability.appendChild(point);
-        point.style.backgroundColor = player;
-        point.className = player;
+        for (let i = 0; i < ability.length; i++) {
+            console.log(ability);
+            let point = document.createElement("div");
+            ability[i].appendChild(point);
+            point.style.backgroundColor = player;
+            point.className = player;  
+            
+        }
+        
+        
     }
 
     // Classes              add atribute: country/region
