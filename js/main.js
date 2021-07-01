@@ -60,16 +60,6 @@ window.onload = () => {
     let colorP9 = "khaki";
     let colorP10 = "lightpink";
 
-    // Adding Points        (acá player tiene que ser colorA1) //   player = color del player/player número x
-    function addPoint(ability, player) {
-        for (let i = 0; i < ability.length; i++) {
-            let point = document.createElement("div");
-            ability[i].appendChild(point);
-            point.style.backgroundColor = player;
-            point.className = player;  
-        } 
-    }
-
     // Classes              add atribute: country/region
     class Agent {
         constructor(name, variable, clase, color, q, e, c, x) {
@@ -91,19 +81,19 @@ window.onload = () => {
 
         ability(player) {
             if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-                addPoint(smoke, player);
-                addPoint(smoke, player);
-                addPoint(vulnerable, player);
-                addPoint(obstacle, player);
-                addPoint(slow, player);
-                addPoint(daze, player);
+                addPoint(smoke, player, astra);
+                addPoint(smoke, player, astra);
+                addPoint(vulnerable, player, astra);
+                addPoint(obstacle, player, astra);
+                addPoint(slow, player, astra);
+                addPoint(daze, player, astra);
             } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
-                addPoint(smokeE, player);
-                addPoint(smokeE, player);
-                addPoint(vulnerableE, player);
-                addPoint(obstacleE, player);
-                addPoint(slowE, player);
-                addPoint(dazeE, player);
+                addPoint(smokeE, player, astra);
+                addPoint(smokeE, player, astra);
+                addPoint(vulnerableE, player, astra);
+                addPoint(obstacleE, player, astra);
+                addPoint(slowE, player, astra);
+                addPoint(dazeE, player, astra);
             }
         }
 
@@ -112,17 +102,17 @@ window.onload = () => {
 
         ability(player) {
             if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-                addPoint(flash, player);
-                addPoint(flash, player);
-                addPoint(daze, player);
-                addPoint(daze, player);
-                addPoint(dmgExpl, player);
+                addPoint(flash, player, breach);
+                addPoint(flash, player, breach);
+                addPoint(daze, player, breach);
+                addPoint(daze, player, breach);
+                addPoint(dmgExpl, player, breach);
             } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
-                addPoint(flashE, player);
-                addPoint(flashE, player);
-                addPoint(dazeE, player);
-                addPoint(dazeE, player);
-                addPoint(dmgExplE, player);
+                addPoint(flashE, player, breach);
+                addPoint(flashE, player, breach);
+                addPoint(dazeE, player, breach);
+                addPoint(dazeE, player, breach);
+                addPoint(dmgExplE, player, breach);
             }
         }
 
@@ -131,21 +121,21 @@ window.onload = () => {
 
         ability(player) {
             if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-                addPoint(smoke, player);
-                addPoint(smoke, player);
-                addPoint(smoke, player);
-                addPoint(dmgExpl, player);
-                addPoint(dmgArea, player);
-                addPoint(rapidFire, player);
-                addPoint(rapidFire, player);
+                addPoint(smoke, player, brimstone);
+                addPoint(smoke, player, brimstone);
+                addPoint(smoke, player, brimstone);
+                addPoint(dmgExpl, player, brimstone);
+                addPoint(dmgArea, player, brimstone);
+                addPoint(rapidFire, player, brimstone);
+                addPoint(rapidFire, player, brimstone);
             } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
-                addPoint(smokeE, player);
-                addPoint(smokeE, player);
-                addPoint(smokeE, player);
-                addPoint(dmgExplE, player);
-                addPoint(dmgAreaE, player);
-                addPoint(rapidFireE, player);
-                addPoint(rapidFireE, player);
+                addPoint(smokeE, player, brimstone);
+                addPoint(smokeE, player, brimstone);
+                addPoint(smokeE, player, brimstone);
+                addPoint(dmgExplE, player, brimstone);
+                addPoint(dmgAreaE, player, brimstone);
+                addPoint(rapidFireE, player, brimstone);
+                addPoint(rapidFireE, player, brimstone);
             }
         }
 
@@ -154,25 +144,25 @@ window.onload = () => {
 
         ability(player) {
             if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-                addPoint(smoke, player);
-                addPoint(obstacle, player);
-                addPoint(slow, player);
-                addPoint(daze, player);
-                addPoint(track, player);
-                addPoint(track, player);
-                addPoint(reveal, player);
-                addPoint(reveal, player);
-                addPoint(reveal, player);
+                addPoint(smoke, player, cypher);
+                addPoint(obstacle, player, cypher);
+                addPoint(slow, player, cypher);
+                addPoint(daze, player, cypher);
+                addPoint(track, player, cypher);
+                addPoint(track, player, cypher);
+                addPoint(reveal, player, cypher);
+                addPoint(reveal, player, cypher);
+                addPoint(reveal, player, cypher);
             } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
-                addPoint(smokeE, player);
-                addPoint(obstacleE, player);
-                addPoint(slowE, player);
-                addPoint(dazeE, player);
-                addPoint(trackE, player);
-                addPoint(trackE, player);
-                addPoint(revealE, player);
-                addPoint(revealE, player);
-                addPoint(revealE, player);
+                addPoint(smokeE, player, cypher);
+                addPoint(obstacleE, player, cypher);
+                addPoint(slowE, player, cypher);
+                addPoint(dazeE, player, cypher);
+                addPoint(trackE, player, cypher);
+                addPoint(trackE, player, cypher);
+                addPoint(revealE, player, cypher);
+                addPoint(revealE, player, cypher);
+                addPoint(revealE, player, cypher);
             }
         }
 
@@ -181,19 +171,19 @@ window.onload = () => {
 
         ability(player) {
             if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-                addPoint(smoke, player);
-                addPoint(dmgExpl, player);
-                addPoint(dmgExpl, player);
-                addPoint(movability, player);
-                addPoint(movability, player);
-                addPoint(movability, player);
+                addPoint(smoke, player, jett);
+                addPoint(dmgExpl, player, jett);
+                addPoint(dmgExpl, player, jett);
+                addPoint(movability, player, jett);
+                addPoint(movability, player, jett);
+                addPoint(movability, player, jett);
             } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
-                addPoint(smokeE, player);
-                addPoint(dmgExplE, player);
-                addPoint(dmgExplE, player);
-                addPoint(movabilityE, player);
-                addPoint(movabilityE, player);
-                addPoint(movabilityE, player);
+                addPoint(smokeE, player, jett);
+                addPoint(dmgExplE, player, jett);
+                addPoint(dmgExplE, player, jett);
+                addPoint(movabilityE, player, jett);
+                addPoint(movabilityE, player, jett);
+                addPoint(movabilityE, player, jett);
             }
         }
 
@@ -202,23 +192,23 @@ window.onload = () => {
 
         ability(player) {
             if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-                addPoint(flash, player);
-                addPoint(flash, player);
-                addPoint(dmgArea, player);
-                addPoint(suppression, player);
-                addPoint(suppression, player);
-                addPoint(track, player);
-                addPoint(revive, player);
-                addPoint(rapidFire, player);
+                addPoint(flash, player, kayo);
+                addPoint(flash, player, kayo);
+                addPoint(dmgArea, player, kayo);
+                addPoint(suppression, player, kayo);
+                addPoint(suppression, player, kayo);
+                addPoint(track, player, kayo);
+                addPoint(revive, player, kayo);
+                addPoint(rapidFire, player, kayo);
             } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
-                addPoint(flashE, player);
-                addPoint(flashE, player);
-                addPoint(dmgAreaE, player);
-                addPoint(suppressionE, player);
-                addPoint(suppressionE, player);
-                addPoint(trackE, player);
-                addPoint(reviveE, player);
-                addPoint(rapidFireE, player);
+                addPoint(flashE, player, kayo);
+                addPoint(flashE, player, kayo);
+                addPoint(dmgAreaE, player, kayo);
+                addPoint(suppressionE, player, kayo);
+                addPoint(suppressionE, player, kayo);
+                addPoint(trackE, player, kayo);
+                addPoint(reviveE, player, kayo);
+                addPoint(rapidFireE, player, kayo);
             }
         }
 
@@ -227,29 +217,29 @@ window.onload = () => {
 
         ability(player) {
             if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-                addPoint(vulnerable, player);
-                addPoint(obstacle, player);
-                addPoint(obstacle, player);
-                addPoint(slow, player);
-                addPoint(track, player);
-                addPoint(track, player);
-                addPoint(track, player);
-                addPoint(dmgExpl, player);
-                addPoint(dmgArea, player);
-                addPoint(dmgArea, player);
-                addPoint(detain, player);
+                addPoint(vulnerable, player, killjoy);
+                addPoint(obstacle, player, killjoy);
+                addPoint(obstacle, player, killjoy);
+                addPoint(slow, player, killjoy);
+                addPoint(track, player, killjoy);
+                addPoint(track, player, killjoy);
+                addPoint(track, player, killjoy);
+                addPoint(dmgExpl, player, killjoy);
+                addPoint(dmgArea, player, killjoy);
+                addPoint(dmgArea, player, killjoy);
+                addPoint(detain, player, killjoy);
             } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
-                addPoint(vulnerableE, player);
-                addPoint(obstacleE, player);
-                addPoint(obstacleE, player);
-                addPoint(slowE, player);
-                addPoint(trackE, player);
-                addPoint(trackE, player);
-                addPoint(trackE, player);
-                addPoint(dmgExplE, player);
-                addPoint(dmgAreaE, player);
-                addPoint(dmgAreaE, player);
-                addPoint(detainE, player);
+                addPoint(vulnerableE, player, killjoy);
+                addPoint(obstacleE, player, killjoy);
+                addPoint(obstacleE, player, killjoy);
+                addPoint(slowE, player, killjoy);
+                addPoint(trackE, player, killjoy);
+                addPoint(trackE, player, killjoy);
+                addPoint(trackE, player, killjoy);
+                addPoint(dmgExplE, player, killjoy);
+                addPoint(dmgAreaE, player, killjoy);
+                addPoint(dmgAreaE, player, killjoy);
+                addPoint(detainE, player, killjoy);
             }
         }
 
@@ -258,21 +248,21 @@ window.onload = () => {
 
         ability(player) {
             if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-                addPoint(smoke, player);
-                addPoint(smoke, player);
-                addPoint(blind, player);
-                addPoint(track, player);
-                addPoint(teleport, player);
-                addPoint(movability, player);
-                addPoint(movability, player);
+                addPoint(smoke, player, omen);
+                addPoint(smoke, player, omen);
+                addPoint(blind, player, omen);
+                addPoint(track, player, omen);
+                addPoint(teleport, player, omen);
+                addPoint(movability, player, omen);
+                addPoint(movability, player, omen);
             } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
-                addPoint(smokeE, player);
-                addPoint(smokeE, player);
-                addPoint(blindE, player);
-                addPoint(trackE, player);
-                addPoint(teleportE, player);
-                addPoint(movabilityE, player);
-                addPoint(movabilityE, player);
+                addPoint(smokeE, player, omen);
+                addPoint(smokeE, player, omen);
+                addPoint(blindE, player, omen);
+                addPoint(trackE, player, omen);
+                addPoint(teleportE, player, omen);
+                addPoint(movabilityE, player, omen);
+                addPoint(movabilityE, player, omen);
             }
         }
 
@@ -281,27 +271,27 @@ window.onload = () => {
 
         ability(player) {
             if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-                addPoint(screen, player);
-                addPoint(flash, player);
-                addPoint(flash, player);
-                addPoint(healSelf, player);
-                addPoint(healSelf, player);
-                addPoint(healSelf, player);
-                addPoint(revive, player);
-                addPoint(dmgExpl, player);
-                addPoint(dmgArea, player);
-                addPoint(movability, player);
+                addPoint(screen, player, phoenix);
+                addPoint(flash, player, phoenix);
+                addPoint(flash, player, phoenix);
+                addPoint(healSelf, player, phoenix);
+                addPoint(healSelf, player, phoenix);
+                addPoint(healSelf, player, phoenix);
+                addPoint(revive, player, phoenix);
+                addPoint(dmgExpl, player, phoenix);
+                addPoint(dmgArea, player, phoenix);
+                addPoint(movability, player, phoenix);
             } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
-                addPoint(screenE, player);
-                addPoint(flashE, player);
-                addPoint(flashE, player);
-                addPoint(healSelfE, player);
-                addPoint(healSelfE, player);
-                addPoint(healSelfE, player);
-                addPoint(reviveE, player);
-                addPoint(dmgExplE, player);
-                addPoint(dmgAreaE, player);
-                addPoint(movabilityE, player);
+                addPoint(screenE, player, phoenix);
+                addPoint(flashE, player, phoenix);
+                addPoint(flashE, player, phoenix);
+                addPoint(healSelfE, player, phoenix);
+                addPoint(healSelfE, player, phoenix);
+                addPoint(healSelfE, player, phoenix);
+                addPoint(reviveE, player, phoenix);
+                addPoint(dmgExplE, player, phoenix);
+                addPoint(dmgAreaE, player, phoenix);
+                addPoint(movabilityE, player, phoenix);
             }
         }
 
@@ -310,21 +300,21 @@ window.onload = () => {
 
         ability(player) {
             if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-                addPoint(dmgExpl, player);
-                addPoint(dmgExpl, player);
-                addPoint(dmgExpl, player);
-                addPoint(dmgExpl, player);
-                addPoint(track, player);
-                addPoint(movability, player);
-                addPoint(movability, player);
+                addPoint(dmgExpl, player, raze);
+                addPoint(dmgExpl, player, raze);
+                addPoint(dmgExpl, player, raze);
+                addPoint(dmgExpl, player, raze);
+                addPoint(track, player, raze);
+                addPoint(movability, player, raze);
+                addPoint(movability, player, raze);
             } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
-                addPoint(dmgExplE, player);
-                addPoint(dmgExplE, player);
-                addPoint(dmgExplE, player);
-                addPoint(dmgExplE, player);
-                addPoint(trackE, player);
-                addPoint(movabilityE, player);
-                addPoint(movabilityE, player);
+                addPoint(dmgExplE, player, raze);
+                addPoint(dmgExplE, player, raze);
+                addPoint(dmgExplE, player, raze);
+                addPoint(dmgExplE, player, raze);
+                addPoint(trackE, player, raze);
+                addPoint(movabilityE, player, raze);
+                addPoint(movabilityE, player, raze);
             }
         }
 
@@ -333,21 +323,21 @@ window.onload = () => {
 
         ability(player) {
             if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-                addPoint(blind, player);
-                addPoint(blind, player);
-                addPoint(healSelf, player);
-                addPoint(healSelf, player);
-                addPoint(rapidFire, player);
-                addPoint(movability, player);
-                addPoint(movability, player);
+                addPoint(blind, player, reyna);
+                addPoint(blind, player, reyna);
+                addPoint(healSelf, player, reyna);
+                addPoint(healSelf, player, reyna);
+                addPoint(rapidFire, player, reyna);
+                addPoint(movability, player, reyna);
+                addPoint(movability, player, reyna);
             } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
-                addPoint(blindE, player);
-                addPoint(blindE, player);
-                addPoint(healSelfE, player);
-                addPoint(healSelfE, player);
-                addPoint(rapidFireE, player);
-                addPoint(movabilityE, player);
-                addPoint(movabilityE, player);
+                addPoint(blindE, player, reyna);
+                addPoint(blindE, player, reyna);
+                addPoint(healSelfE, player, reyna);
+                addPoint(healSelfE, player, reyna);
+                addPoint(rapidFireE, player, reyna);
+                addPoint(movabilityE, player, reyna);
+                addPoint(movabilityE, player, reyna);
             }
         }
 
@@ -356,19 +346,19 @@ window.onload = () => {
 
         ability(player) {
             if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-                addPoint(obstacle, player);
-                addPoint(slow, player);
-                addPoint(slow, player);
-                addPoint(heal, player);
-                addPoint(revive, player);
-                addPoint(healSelf, player);
+                addPoint(obstacle, player, sage);
+                addPoint(slow, player, sage);
+                addPoint(slow, player, sage);
+                addPoint(heal, player, sage);
+                addPoint(revive, player, sage);
+                addPoint(healSelf, player, sage);
             } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
-                addPoint(obstacleE, player);
-                addPoint(slowE, player);
-                addPoint(slowE, player);
-                addPoint(healE, player);
-                addPoint(reviveE, player);
-                addPoint(healSelfE, player);
+                addPoint(obstacleE, player, sage);
+                addPoint(slowE, player, sage);
+                addPoint(slowE, player, sage);
+                addPoint(healE, player, sage);
+                addPoint(reviveE, player, sage);
+                addPoint(healSelfE, player, sage);
             }
         }
 
@@ -377,23 +367,23 @@ window.onload = () => {
 
         ability(player) {
             if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-                addPoint(flash, player);
-                addPoint(flash, player);
-                addPoint(blind, player);
-                addPoint(heal, player);
-                addPoint(concussion, player);
-                addPoint(track, player);
-                addPoint(track, player);
-                addPoint(track, player);
+                addPoint(flash, player, skye);
+                addPoint(flash, player, skye);
+                addPoint(blind, player, skye);
+                addPoint(heal, player, skye);
+                addPoint(concussion, player, skye);
+                addPoint(track, player, skye);
+                addPoint(track, player, skye);
+                addPoint(track, player, skye);
             } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
-                addPoint(flashE, player);
-                addPoint(flashE, player);
-                addPoint(blindE, player);
-                addPoint(healE, player);
-                addPoint(concussionE, player);
-                addPoint(trackE, player);
-                addPoint(trackE, player);
-                addPoint(trackE, player);
+                addPoint(flashE, player, skye);
+                addPoint(flashE, player, skye);
+                addPoint(blindE, player, skye);
+                addPoint(healE, player, skye);
+                addPoint(concussionE, player, skye);
+                addPoint(trackE, player, skye);
+                addPoint(trackE, player, skye);
+                addPoint(trackE, player, skye);
             }
         }
 
@@ -402,23 +392,23 @@ window.onload = () => {
 
         ability(player) {
             if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-                addPoint(track, player);
-                addPoint(track, player);
-                addPoint(reveal, player);
-                addPoint(reveal, player);
-                addPoint(reveal, player);
-                addPoint(dmgExpl, player);
-                addPoint(dmgExpl, player);
-                addPoint(dmgExpl, player);
+                addPoint(track, player, sova);
+                addPoint(track, player, sova);
+                addPoint(reveal, player, sova);
+                addPoint(reveal, player, sova);
+                addPoint(reveal, player, sova);
+                addPoint(dmgExpl, player, sova);
+                addPoint(dmgExpl, player, sova);
+                addPoint(dmgExpl, player, sova);
             } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
-                addPoint(trackE, player);
-                addPoint(trackE, player);
-                addPoint(revealE, player);
-                addPoint(revealE, player);
-                addPoint(revealE, player);
-                addPoint(dmgExplE, player);
-                addPoint(dmgExplE, player);
-                addPoint(dmgExplE, player);
+                addPoint(trackE, player, sova);
+                addPoint(trackE, player, sova);
+                addPoint(revealE, player, sova);
+                addPoint(revealE, player, sova);
+                addPoint(revealE, player, sova);
+                addPoint(dmgExplE, player, sova);
+                addPoint(dmgExplE, player, sova);
+                addPoint(dmgExplE, player, sova);
             }
         }
 
@@ -427,25 +417,25 @@ window.onload = () => {
 
         ability(player) {
             if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-                addPoint(smoke, player);
-                addPoint(smoke, player);
-                addPoint(screen, player);
-                addPoint(slow, player);
-                addPoint(obstacle, player);
-                addPoint(dmgExpl, player);
-                addPoint(dmgExpl, player);
-                addPoint(dmgArea, player);
-                addPoint(dmgArea, player);
+                addPoint(smoke, player, viper);
+                addPoint(smoke, player, viper);
+                addPoint(screen, player, viper);
+                addPoint(slow, player, viper);
+                addPoint(obstacle, player, viper);
+                addPoint(dmgExpl, player, viper);
+                addPoint(dmgExpl, player, viper);
+                addPoint(dmgArea, player, viper);
+                addPoint(dmgArea, player, viper);
             } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
-                addPoint(smokeE, player);
-                addPoint(smokeE, player);
-                addPoint(screenE, player);
-                addPoint(slowE, player);
-                addPoint(obstacleE, player);
-                addPoint(dmgExplE, player);
-                addPoint(dmgExplE, player);
-                addPoint(dmgAreaE, player);
-                addPoint(dmgAreaE, player);
+                addPoint(smokeE, player, viper);
+                addPoint(smokeE, player, viper);
+                addPoint(screenE, player, viper);
+                addPoint(slowE, player, viper);
+                addPoint(obstacleE, player, viper);
+                addPoint(dmgExplE, player, viper);
+                addPoint(dmgExplE, player, viper);
+                addPoint(dmgAreaE, player, viper);
+                addPoint(dmgAreaE, player, viper);
             }
         }
 
@@ -454,29 +444,29 @@ window.onload = () => {
 
         ability(player) {
             if (player === colorP1 || player === colorP2 || player === colorP3 || player === colorP4 || player === colorP5) {
-                addPoint(flash, player);
-                addPoint(flash, player);
-                addPoint(track, player);
-                addPoint(track, player);
-                addPoint(teleport, player);
-                addPoint(teleport, player);
-                addPoint(movability, player);
-                addPoint(movability, player);
-                addPoint(decoy, player);
-                addPoint(decoy, player);
-                addPoint(decoy, player);
+                addPoint(flash, player, yoru);
+                addPoint(flash, player, yoru);
+                addPoint(track, player, yoru);
+                addPoint(track, player, yoru);
+                addPoint(teleport, player, yoru);
+                addPoint(teleport, player, yoru);
+                addPoint(movability, player, yoru);
+                addPoint(movability, player, yoru);
+                addPoint(decoy, player, yoru);
+                addPoint(decoy, player, yoru);
+                addPoint(decoy, player, yoru);
             } else if (player === colorP6 || player === colorP7 || player === colorP8 || player === colorP9 || player === colorP10) {
-                addPoint(flashE, player);
-                addPoint(flashE, player);
-                addPoint(trackE, player);
-                addPoint(trackE, player);
-                addPoint(teleportE, player);
-                addPoint(teleportE, player);
-                addPoint(movabilityE, player);
-                addPoint(movabilityE, player);
-                addPoint(decoyE, player);
-                addPoint(decoyE, player);
-                addPoint(decoyE, player);
+                addPoint(flashE, player, yoru);
+                addPoint(flashE, player, yoru);
+                addPoint(trackE, player, yoru);
+                addPoint(trackE, player, yoru);
+                addPoint(teleportE, player, yoru);
+                addPoint(teleportE, player, yoru);
+                addPoint(movabilityE, player, yoru);
+                addPoint(movabilityE, player, yoru);
+                addPoint(decoyE, player, yoru);
+                addPoint(decoyE, player, yoru);
+                addPoint(decoyE, player, yoru);
             }
         }
 
@@ -500,7 +490,16 @@ window.onload = () => {
     let viper = new Viper("Viper", "viper", "controller", "#0ED534", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
     let yoru = new Yoru("Yoru", "yoru", "duelist", "#0306A5", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
 
-    
+    // Adding Points        (acá player tiene que ser colorA1) //   player = color del player/player número x
+    function addPoint(ability, player, agent) {
+        for (let i = 0; i < ability.length; i++) {
+            let point = document.createElement("div");
+            ability[i].appendChild(point);
+            point.style.backgroundColor = agent.color;
+            point.style.borderTopColor = player;
+            point.className = player;
+        } 
+    }
 
     // Agent Selection
     function agentSelection(option, agent, player) {
@@ -508,7 +507,6 @@ window.onload = () => {
             agent.className = '';
             agent.classList.add("astra");
             agent.classList.add(astra.clase);
-
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
             astra.ability(player);
@@ -518,7 +516,6 @@ window.onload = () => {
             agent.classList.add("breach");
 
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
-
             breach.ability(player);
 
         } else if (option === "brimstone") {
@@ -641,7 +638,6 @@ window.onload = () => {
 
     //Player selects an Agent, adds certain points to abilities
     let paraClases = ".";
-
 
     let agent1 = document.querySelector("#agent1");
     let player1 = document.querySelector("#player1");

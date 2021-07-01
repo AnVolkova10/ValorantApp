@@ -19,9 +19,14 @@ nav {
     display: flex;
     height: 300px;
     justify-content: center;
+}
 
+select {
+    height: 25px;
+    width: 70px;
     
 }
+
 h1 {
     text-align: center;
 }
@@ -45,31 +50,31 @@ aside section {
 }
 
 [for="player1"] {
-    background-color: blue;
+    background-color: #1d1dcc;
 }
 [for="player2"] {
-    background-color: red;
+    background-color: #b61616;
 }
 [for="player3"] {
-    background-color: green;
+    background-color: #055a05;
 }
 [for="player4"] {
-    background-color: yellow;
+    background-color: #d6a916;
 }
 [for="player5"] {
-    background-color: pink;
+    background-color: #b33348;
 }
 [for="player6"] {
-    background-color: lightblue;
+    background-color: #7285da;
 }
 [for="player7"] {
-    background-color: lightcoral;
+    background-color: #ac4949;
 }
 [for="player8"] {
-    background-color: lightgreen;
+    background-color: #415f44;
 }
 [for="player9"] {
-    background-color: lightgoldenrodyellow;
+    background-color: #a8a858;
 }
 [for="player10"] {
     background-color: lightpink;
@@ -90,7 +95,7 @@ aside section {
 
 .brimstone {
     background-image: url(../img/brimstone.png), url(../img/controller.png);
-    background-position: 100px -70px, 300px;
+    background-position: 100px -80px, 300px;
     background-repeat: no-repeat;
     background-size: auto, 40px;
 }
@@ -208,7 +213,10 @@ div {
     display:inline-block;
     height: 15px;
     width: 15px;
-    border-right: solid 0.1px;
+    border-radius: 10px;
+    margin: 0.5px;
+    border:solid 0.1px grey;
+    border-top: solid 5px;
     
 }
 p {
