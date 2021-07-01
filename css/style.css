@@ -44,7 +44,7 @@ form {
 }
 
 aside section {
-    border: solid #ffffff;
+    border: solid #ffffff 1px;
     border-radius: 10px;
     height: 45px;
 }
