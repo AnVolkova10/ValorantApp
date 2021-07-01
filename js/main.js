@@ -62,18 +62,12 @@ window.onload = () => {
 
     // Adding Points        (acá player tiene que ser colorA1) //   player = color del player/player número x
     function addPoint(ability, player) {
-        
-
         for (let i = 0; i < ability.length; i++) {
-            console.log(ability);
             let point = document.createElement("div");
             ability[i].appendChild(point);
             point.style.backgroundColor = player;
             point.className = player;  
-            
-        }
-        
-        
+        } 
     }
 
     // Classes              add atribute: country/region
@@ -489,29 +483,31 @@ window.onload = () => {
     }
 
     // Agents - Objects
-    let astra = new Astra("Astra", "astra", "Controller", "#5A2EBD", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
-    let breach = new Breach("Breach", "breach", "Initiator", "#995926", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
-    let brimstone = new Brimstone("Brimstone", "brimstone", "Controller", "#BD4200", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
-    let cypher = new Cypher("Cypher", "cypher", "Sentinel", "#3EF2F9", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
-    let jett = new Jett("Jett", "jett", "Duelist", "#B9C3D9", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
-    let kayo = new Kayo("KAY/O", "kayo", "Initiator", "#1F398B", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
-    let killjoy = new Killjoy("Killjoy", "killjoy", "Sentinel", "#FBDB32", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
-    let omen = new Omen("Omen", "omen", "Controller", "#5857CC", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
-    let phoenix = new Phoenix("Phoenix", "phoenix", "Duelist", "#FBAC4F", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
-    let raze = new Raze("Raze", "raze", "Duelist", "#E06739", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
-    let reyna = new Reyna("Reyna", "reyna", "Duelist", "#9B3587", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
-    let sage = new Sage("Sage", "sage", "Duelist", "#36E4C4", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
-    let skye = new Skye("Skye", "skye", "Initiator", "#4F6539", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
-    let sova = new Sova("Sova", "sova", "Initiator", "#3C598D", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
-    let viper = new Viper("Viper", "viper", "Controller", "#0ED534", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
-    let yoru = new Yoru("Yoru", "yoru", "Duelist", "#0306A5", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let astra = new Astra("Astra", "astra", "controller", "#5A2EBD", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let breach = new Breach("Breach", "breach", "initiator", "#995926", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let brimstone = new Brimstone("Brimstone", "brimstone", "controller", "#BD4200", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let cypher = new Cypher("Cypher", "cypher", "sentinel", "#3EF2F9", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let jett = new Jett("Jett", "jett", "duelist", "#B9C3D9", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let kayo = new Kayo("KAY/O", "kayo", "initiator", "#1F398B", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let killjoy = new Killjoy("Killjoy", "killjoy", "sentinel", "#FBDB32", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let omen = new Omen("Omen", "omen", "controller", "#5857CC", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let phoenix = new Phoenix("Phoenix", "phoenix", "duelist", "#FBAC4F", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let raze = new Raze("Raze", "raze", "duelist", "#E06739", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let reyna = new Reyna("Reyna", "reyna", "duelist", "#9B3587", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let sage = new Sage("Sage", "sage", "duelist", "#36E4C4", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let skye = new Skye("Skye", "skye", "initiator", "#4F6539", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let sova = new Sova("Sova", "sova", "initiator", "#3C598D", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let viper = new Viper("Viper", "viper", "controller", "#0ED534", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
+    let yoru = new Yoru("Yoru", "yoru", "duelist", "#0306A5", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
 
+    
 
     // Agent Selection
     function agentSelection(option, agent, player) {
         if (option === "astra") {
             agent.className = '';
             agent.classList.add("astra");
+            agent.classList.add(astra.clase);
 
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
@@ -728,14 +724,16 @@ window.onload = () => {
 
     // Basic - Advanced Section
     let basic = document.querySelector(".basic");
+    basic.style.display = "flex"
+
     let advanced = document.querySelector(".advanced");
-    let basicAdvanced = document.querySelector(".basicAdvanced");
     let btnBasicAdvanced = document.querySelector(".btnBasicAdvanced");
+    
     btnBasicAdvanced.addEventListener('click', function() {
         if (basic.style.display === "flex") {
             basic.style.display = "none";
             advanced.style.display = "flex";
-        } else {
+        } else if (advanced.style.display = "flex") {
             basic.style.display = "flex";
             advanced.style.display = "none";
         }
