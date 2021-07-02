@@ -12,11 +12,24 @@ error_reporting(E_ALL);
     <title>VALORANT TEAM-STRATEGY</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="https://kit.fontawesome.com/7e0b075d33.js" crossorigin="anonymous"></script>
     <script src="js/main.js" ></script>
 </head>
 <body>
+    <main class="login">
+        <h1>Log in</h1>
+        <form action="login.php" method="post">
+            <label>User
+                <input type="text" name="user">
+            </label>
+            <label>Password
+                <input type="password" name="password">
+            </label>
+            <button type="submit">Log In</button>
+            <a href="signin.html">Need User</a>
+        </form>
+    </main>
     <nav>
         <aside>
             <h2>Select Your Team</h2>

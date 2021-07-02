@@ -9,7 +9,7 @@
 body {
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color: #000000;
 }
 
 
@@ -238,6 +238,24 @@ p {
 .smoke, .screen, .flash, .blind, .obstacle, .slow, .daze, .heal, .healSelf, .track, .reveal, .dmgExpl, .dmgArea, .teleport, .movability, .rapidFire, .concussion, .revive, .decoy, .vulnerable, .suppression, .detain {
     display: flex;
     justify-content: flex-start;
+}
+
+/* LOGIN */
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    width: 300px;
+    margin: auto;
+    background-color: black;
+    color: white;
+    border: solid white 0.1px;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+[type="text"] {
+    margin-left: 34.5px;
 }
 
 @media screen and (max-width: 640px) {
