@@ -1,9 +1,3 @@
-<?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-echo '<pre>';
-var_dump( $_POST );
-?>
 <!DOCTYPE html>
 <html lang="es-AR">
 <head>
@@ -306,3 +300,10 @@ var_dump( $_POST );
     </section>
 </body>
 </html>
+
+<?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+echo '<pre>';
+var_dump( $_POST );
+?>
