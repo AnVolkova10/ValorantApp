@@ -1,5 +1,13 @@
 window.onload = () => {
+    
+    //LOG IN LOGIC /////////////////////////////////////////////////
+    let guest = document.querySelector(".guest");
+    let login = document.querySelector(".login");
+    guest.addEventListener("click", function (){
+        login.style.display = "none";
+    })
 
+    //GAME LOGIC /////////////////////////////////////////////////
     //Allied Abilities
     let smoke = document.querySelectorAll(".smoke");
     let screen = document.querySelectorAll(".screen");

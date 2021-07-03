@@ -3,7 +3,6 @@
     padding: 2px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: none;
-    
 }
 
 body {
@@ -12,8 +11,32 @@ body {
     background-color: #000000;
 }
 
+/* LOG-IN */
 
-/* PICK */
+.login, .signin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    margin: auto;
+    background-color: black;
+    color: white;
+    border: solid white 0.1px;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+[type="text"] {
+    margin-left: 34.5px;
+}
+
+[type="submit"] {
+    width: 100px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+/* TEAM SELECTION */
 
 nav {
     display: flex;
@@ -24,7 +47,6 @@ nav {
 select {
     height: 25px;
     width: 70px;
-    
 }
 
 h1 {
@@ -33,7 +55,7 @@ h1 {
 
 aside {
     background-color: #000000;
-    height:300px;
+    height: 300px;
     width: 500px;
     color: white;
 }
@@ -52,33 +74,43 @@ aside section {
 [for="player1"] {
     background-color: #1d1dcc;
 }
+
 [for="player2"] {
     background-color: #b61616;
 }
+
 [for="player3"] {
     background-color: #055a05;
 }
+
 [for="player4"] {
     background-color: #d6a916;
 }
+
 [for="player5"] {
     background-color: #b33348;
 }
+
 [for="player6"] {
     background-color: #7285da;
 }
+
 [for="player7"] {
     background-color: #ac4949;
 }
+
 [for="player8"] {
     background-color: #415f44;
 }
+
 [for="player9"] {
     background-color: #a8a858;
 }
+
 [for="player10"] {
     background-color: lightpink;
 }
+
 .astra {
     background-image: url(../img/astra.png), url(../img/controller.png);
     background-position: 100px, 300px;
@@ -106,42 +138,49 @@ aside section {
     background-repeat: no-repeat;
     background-size: auto, 40px;
 }
+
 .jett {
     background-image: url(../img/jett.png), url(../img/duelist.png);
     background-position: 70px, 300px;
     background-repeat: no-repeat;
     background-size: auto, 40px;
 }
+
 .kayo {
     background-image: url(../img/kayo.png), url(../img/initiator.png);
     background-position: 90px -50px, 300px;
     background-repeat: no-repeat;
     background-size: auto, 40px;
 }
+
 .killjoy {
-    background-image: url(../img/sentinel.png), url(../img/killjoy.png) ;
+    background-image: url(../img/sentinel.png), url(../img/killjoy.png);
     background-position: 300px, 80px;
     background-repeat: no-repeat;
     background-size: 40px, auto;
 }
+
 .omen {
     background-image: url(../img/omen.png), url(../img/controller.png);
     background-position: 80px, 300px;
     background-repeat: no-repeat;
     background-size: auto, 40px;
 }
+
 .phoenix {
     background-image: url(../img/phoenix.png), url(../img/duelist.png);
     background-position: 105px -100px, 300px;
     background-repeat: no-repeat;
     background-size: auto, 40px;
 }
+
 .raze {
     background-image: url(../img/raze.png), url(../img/duelist.png);
     background-position: 85px -85px, 300px;
     background-repeat: no-repeat;
     background-size: auto, 40px;
 }
+
 .reyna {
     background-image: url(../img/reyna.png), url(../img/duelist.png);
     background-position: 95px, 300px;
@@ -184,22 +223,21 @@ aside section {
     background-size: auto, 40px;
 }
 
+/* ABILITIES */
 
-
-
-/* STRATEGY */
 .basic {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color:#ffffff;
+    background-color: #ffffff;
     height: 350px;
 }
+
 .advanced {
     display: none;
     flex-direction: column;
     align-items: center;
-    background-color:#ffffff;
+    background-color: #ffffff;
     height: 800px;
 }
 
@@ -210,15 +248,15 @@ main section {
 }
 
 div {
-    display:inline-block;
+    display: inline-block;
     height: 15px;
     width: 15px;
     border-radius: 10px;
     margin: 0.5px;
-    border:solid 0.1px grey;
+    border: solid 0.1px grey;
     border-top: solid 5px;
-    
 }
+
 p {
     display: inline;
     text-align: center;
@@ -226,8 +264,7 @@ p {
 
 .abilities {
     display: grid;
-    grid-template-columns:  2fr 1fr 2fr;
-    
+    grid-template-columns: 2fr 1fr 2fr;
 }
 
 .smokeE, .screenE, .flashE, .blindE, .obstacleE, .slowE, .dazeE, .healE, .healSelfE, .trackE, .revealE, .dmgExplE, .dmgAreaE, .teleportE, .movabilityE, .rapidFireE, .concussionE, .reviveE, .decoyE, .vulnerableE, .suppressionE, .detainE {
@@ -235,38 +272,22 @@ p {
     flex-direction: row-reverse;
     justify-content: flex-end;
 }
+
 .smoke, .screen, .flash, .blind, .obstacle, .slow, .daze, .heal, .healSelf, .track, .reveal, .dmgExpl, .dmgArea, .teleport, .movability, .rapidFire, .concussion, .revive, .decoy, .vulnerable, .suppression, .detain {
     display: flex;
     justify-content: flex-start;
 }
 
-/* LOGIN */
-.login {
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    width: 300px;
-    margin: auto;
-    background-color: black;
-    color: white;
-    border: solid white 0.1px;
-    border-radius: 4px;
-    padding: 10px;
-}
-
-[type="text"] {
-    margin-left: 34.5px;
-}
+/* MEDIA QUERY */
 
 @media screen and (max-width: 640px) {
     body {
-        font-size:smaller;
+        font-size: smaller;
     }
     nav {
         flex-direction: column;
         height: 500px;
     }
-
     aside {
         height: 600px;
     }
@@ -277,8 +298,8 @@ p {
     aside section {
         height: 35px;
     }
-}
+    [type="text"] {
+        margin-left: 28.5px;
+    }
     
-
-
-
+}
