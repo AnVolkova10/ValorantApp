@@ -15,14 +15,17 @@
 	<h1>Register</h1>
 	<form action="signin.php" method="post">
 		<label>User
-			<input type="text" name="user" placeholder="A-Z, 0-9" required>
+			<input type="text" name="user" placeholder="User de Valorant" required>
+		</label>
+		<label>Tagline
+			<input type="text" name="tagline" placeholder="#LAS, #3489, etc" required>
 		</label>
 
 		<label>Password
 			<input type="password" name="password" placeholder="4-10 characters A-Z, 0-9" required>
 		</label>
 		<label>Repeat it!
-			<input type="password" name="r-password" placeholder="repeat" required>
+			<input type="password" name="re-password" placeholder="repeat" required>
 		</label>
 
 		<label>Email
@@ -30,9 +33,9 @@
 		</label>
 
 		<label>How did you meet us?
-			<select name="account_use" required>
+			<select name="source" required>
 				<option value="friend">I'm a friend</option>
-				<option value="social-networks">Social-Networks</option>
+				<option value="social-network">Social-Network</option>
 				<option value="github">Github</option>
 				<option value="other">Other</option>
 			</select>
