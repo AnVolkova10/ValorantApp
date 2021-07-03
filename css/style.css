@@ -25,11 +25,15 @@ body {
     border-radius: 4px;
     padding: 10px;
 }
-
+label {
+    margin-top: 10px;
+}
 [type="text"] {
     margin-left: 34.5px;
 }
-
+[type="email"] {
+    margin-left: 28.5px;
+}
 [type="submit"] {
     width: 100px;
     margin: auto;
