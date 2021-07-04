@@ -511,39 +511,49 @@ window.onload = () => {
             let point = document.createElement("div");
             ability[i].appendChild(point);
             point.style.backgroundColor = agent.color;
-            point.style.borderTopColor = player;
+            point.style.borderBottomColor = player;
             point.className = player;
         } 
+    }
+
+    // WORK IN PROGRESS W I P
+    function enableOption () {
+        let enable = document.querySelectorAll('["value="'+agent.variable+'"]');
+        enable.style.display = "block";
+    }
+    function disableOption () {
+        let disable = document.querySelectorAll('["value="'+agent.variable+'"]');
+        disable.style.display = "none";
     }
 
     // Agent Selection
     function agentSelection(option, agent, player) {
         if (option === "astra") {
             agent.className = '';
-            agent.classList.add("astra");
+            agent.classList.add(astra.variable);
             agent.classList.add(astra.clase);
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
-
             astra.ability(player);
+            
 
         } else if (option === "breach") {
             agent.className = '';
-            agent.classList.add("breach");
+            agent.classList.add(breach.variable);
             agent.classList.add(breach.clase);
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
             breach.ability(player);
 
         } else if (option === "brimstone") {
             agent.className = '';
-            agent.classList.add("brimstone");
-            agent.classList.add(breach.clase);
+            agent.classList.add(brimstone.variable);
+            agent.classList.add(brimstone.clase);
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
             brimstone.ability(player);
 
         } else if (option === "cypher") {
             agent.className = '';
-            agent.classList.add("cypher");
+            agent.classList.add(cypher.variable);
             agent.classList.add(cypher.clase);
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
@@ -551,7 +561,7 @@ window.onload = () => {
 
         } else if (option === "jett") {
             agent.className = '';
-            agent.classList.add("jett");
+            agent.classList.add(jett.variable);
             agent.classList.add(jett.clase);
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
@@ -559,7 +569,7 @@ window.onload = () => {
 
         } else if (option === "kayo") {
             agent.className = '';
-            agent.classList.add("kayo");
+            agent.classList.add(kayo.variable);
             agent.classList.add(kayo.clase);
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
@@ -567,7 +577,7 @@ window.onload = () => {
 
         } else if (option === "killjoy") {
             agent.className = '';
-            agent.classList.add("killjoy");
+            agent.classList.add(killjoy.variable);
             agent.classList.add(killjoy.clase);
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
@@ -575,7 +585,7 @@ window.onload = () => {
 
         } else if (option === "omen") {
             agent.className = '';
-            agent.classList.add("omen");
+            agent.classList.add(omen.variable);
             agent.classList.add(omen.clase);
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
@@ -583,7 +593,7 @@ window.onload = () => {
 
         } else if (option === "phoenix") {
             agent.className = '';
-            agent.classList.add("phoenix");
+            agent.classList.add(phoenix.variable);
             agent.classList.add(phoenix.clase);
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
@@ -591,7 +601,7 @@ window.onload = () => {
 
         } else if (option === "raze") {
             agent.className = '';
-            agent.classList.add("raze");
+            agent.classList.add(raze.variable);
             agent.classList.add(raze.clase);
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
@@ -599,7 +609,7 @@ window.onload = () => {
 
         } else if (option === "reyna") {
             agent.className = '';
-            agent.classList.add("reyna");
+            agent.classList.add(reyna.variable);
             agent.classList.add(reyna.clase);
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
@@ -607,7 +617,7 @@ window.onload = () => {
 
         } else if (option === "sage") {
             agent.className = '';
-            agent.classList.add("sage");
+            agent.classList.add(sage.variable);
             agent.classList.add(sage.clase);
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
@@ -615,7 +625,7 @@ window.onload = () => {
 
         } else if (option === "skye") {
             agent.className = '';
-            agent.classList.add("skye");
+            agent.classList.add(skye.variable);
             agent.classList.add(skye.clase);
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
@@ -623,7 +633,7 @@ window.onload = () => {
 
         } else if (option === "sova") {
             agent.className = '';
-            agent.classList.add("sova");
+            agent.classList.add(sova.variable);
             agent.classList.add(sova.clase);
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
@@ -631,7 +641,7 @@ window.onload = () => {
 
         } else if (option === "viper") {
             agent.className = '';
-            agent.classList.add("viper");
+            agent.classList.add(viper.variable);
             agent.classList.add(viper.clase);
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
@@ -639,7 +649,7 @@ window.onload = () => {
 
         } else if (option === "yoru") {
             agent.className = '';
-            agent.classList.add("yoru");
+            agent.classList.add(yoru.variable);
             agent.classList.add(yoru.clase);
             document.querySelectorAll(paraClases + player).forEach(el => el.remove());
 
@@ -651,6 +661,7 @@ window.onload = () => {
 
     }
 
+    // CLasses Selection W I P
     function classesSelection() {
         let controller = document.querySelectorAll(".controller");
         let sentinel = document.querySelectorAll(".sentinel");

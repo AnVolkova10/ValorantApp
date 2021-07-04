@@ -56,6 +56,7 @@ a {
 }
 
 .login {
+    margin-top: 10px;
     padding-top: 30px;
     padding-bottom: 20px;
 }
@@ -78,7 +79,7 @@ label {
 
 .teams {
     display: flex;
-    height: 300px;
+    height: 280px;
     justify-content: center;
 }
 
@@ -95,7 +96,7 @@ h1 {
 
 aside {
     background-color: #000000;
-    height: 300px;
+    height: 280px;
     width: 500px;
     color: white;
 }
@@ -298,7 +299,7 @@ div {
     border-radius: 10px;
     margin: 0.5px;
     border: solid 0.1px grey;
-    border-top: solid 5px;
+    border-bottom: solid 7px;
 }
 
 p {
@@ -335,7 +336,11 @@ footer {
     body {
         font-size: smaller;
     }
-    
+    .teams {
+        display: flex;
+        flex-direction: column;
+        height: 570px;
+    }
     aside {
         height: 600px;
     }
