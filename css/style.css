@@ -1,4 +1,5 @@
 * {
+    zoom: 98.5%;
     margin: 0px;
     padding: 2px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -12,6 +13,34 @@ body {
 }
 
 /* LOG-IN */
+header {
+    display: none;
+    background-color: #414141;
+    color: rgb(148, 148, 148);
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+
+a:visited {
+    color: #db7474;
+}
+
+.guest {
+    color: rgb(161, 160, 160);
+}
+.guest:visited {
+    color: rgb(161, 160, 160);
+}
+
+.fas {
+    color: white;
+    align-self: flex-end;
+}
+
+a {
+    color: #db7474;
+}
 
 .login, .signin {
     display: flex;
@@ -24,6 +53,11 @@ body {
     border: solid white 0.1px;
     border-radius: 4px;
     padding: 10px;
+}
+
+.login {
+    padding-top: 30px;
+    padding-bottom: 20px;
 }
 label {
     margin-top: 10px;
@@ -42,11 +76,13 @@ label {
 
 /* TEAM SELECTION */
 
-nav {
+.teams {
     display: flex;
     height: 300px;
     justify-content: center;
 }
+
+
 
 select {
     height: 25px;
@@ -73,6 +109,10 @@ aside section {
     border: solid #ffffff 1px;
     border-radius: 10px;
     height: 45px;
+}
+
+.teamE {
+   text-align: right;
 }
 
 [for="player1"] {
@@ -245,7 +285,7 @@ aside section {
     height: 800px;
 }
 
-main section {
+section section {
     height: 30px;
     display: inline;
     flex-direction: row-reverse;
@@ -282,25 +322,26 @@ p {
     justify-content: flex-start;
 }
 
+
+footer {
+    color: white;
+    text-align: right;
+    font-style: oblique;
+    font-size: smaller;
+}
 /* MEDIA QUERY */
 
 @media screen and (max-width: 640px) {
     body {
         font-size: smaller;
     }
-    nav {
-        flex-direction: column;
-        height: 500px;
-    }
+    
     aside {
         height: 600px;
     }
     div {
         height: 5px;
         width: 5px;
-    }
-    aside section {
-        height: 35px;
     }
     [type="text"] {
         margin-left: 28.5px;

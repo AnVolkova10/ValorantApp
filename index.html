@@ -12,6 +12,11 @@
     <script src="js/main.js"></script>
 </head>
 <body>
+    <header class="guest-mode">
+        <p>Guest-Mode-Activated</p>
+        <a href="signin.html" class="guest-login">Log in 4 more benefits</a>
+    </header>
+    <nav></nav>
     <main class="login">
         <h1>Log in</h1>
         <form action="login.php" method="post">
@@ -26,8 +31,8 @@
             <a href="signin.html">Need User</a>
             <a class="guest" href="#">Guest Mode</a>
     </main>
-    <nav>
-        <aside>
+    <main class="teams">
+        <aside >
             <h2>Select Your Team</h2>
             <form action="" method="post">
                 <section id="agent1" class="agent1">
@@ -147,9 +152,9 @@
                 </section>
             </form>
         </aside>
-        <aside>
-            <h2>Select The Enemy Team</h2>
-            <form action="" method="post">
+        <aside >
+            <h2 class="teamE">Select The Enemy Team</h2>
+            <form action="" method="post" class="teamE">
                 <section id="agent6" class="agent6">
                     <label for="player6"> Player 6 :
                         <select name="player6" id="player6">
@@ -267,10 +272,10 @@
                 </section>
             </form>
         </aside>
-    </nav>
-    <h1><button class="btnBasicAdvanced">Basic/Advanced</button></h1>
-    <section class="basicAdvanced">
-        <main class="basic">
+    </main>
+    <main class="basicAdvanced">
+        <h1><button class="btnBasicAdvanced">Basic/Advanced</button></h1>
+        <section class="basic">
             <h2>Basic</h2> 
             <section class="abilities">
                 <section class="smoke screen"><p></p></section><p>Smokes/Screens</p> <section class="smokeE screenE"></section>
@@ -283,8 +288,8 @@
                 <section class="rapidFire vulnerable"></section><p>RapidFire/Vulnerable</p> <section class="rapidFireE vulnerableE"></section>
                 <section class="suppression detain"></section><p>Suppression/Detain</p> <section class="suppressionE detainE"></section>
             </section>
-        </main>
-        <main class="advanced">
+        </section>
+        <section class="advanced">
             <h2>Advanced</h2>    
             <section class="abilities">
                 <section class="smoke"><p></p></section><p>Smokes</p> <section class="smokeE"></section>
@@ -310,7 +315,8 @@
                 <section class="suppression"></section><p>Suppression</p> <section class="suppressionE"></section>
                 <section class="detain"></section><p>Detain</p> <section class="detainE"></section>
             </section>
-        </main>
-    </section>
+        </section>
+    </main>
+    <footer><p>by Volkova.</p></footer>
 </body>
 </html>

@@ -3,9 +3,16 @@ window.onload = () => {
     //LOG IN LOGIC /////////////////////////////////////////////////
     let guest = document.querySelector(".guest");
     let login = document.querySelector(".login");
+    let guestMode = document.querySelector(".guest-mode");
     guest.addEventListener("click", function (){
         login.style.display = "none";
+        guestMode.style.display ="flex";
     })
+
+    
+    
+   
+    
 
     //GAME LOGIC /////////////////////////////////////////////////
     //Allied Abilities
