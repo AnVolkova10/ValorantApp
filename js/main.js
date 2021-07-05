@@ -1,6 +1,6 @@
 window.onload = () => {
     
-    //LOG IN LOGIC /////////////////////////////////////////////////
+    //LOG IN - REGISTER LOGIC /////////////////////////////////////////////////
     let guest = document.querySelector(".guest");
     let login = document.querySelector(".login");
     let guestMode = document.querySelector(".guest-mode");
@@ -8,11 +8,6 @@ window.onload = () => {
         login.style.display = "none";
         guestMode.style.display ="flex";
     })
-
-    
-    
-   
-    
 
     //GAME LOGIC /////////////////////////////////////////////////
     //Allied Abilities
@@ -505,6 +500,7 @@ window.onload = () => {
     let viper = new Viper("Viper", "viper", "controller", "#0ED534", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
     let yoru = new Yoru("Yoru", "yoru", "duelist", "#0306A5", "clases de habilidades", "clases de habilidades", "clases de habilidades", "clases de habilidades")
 
+    // FUNCTIONS ///////////////////////////////////////////////////////////
     // Adding Points        (acá player tiene que ser colorA1) //   player = color del player/player número x
     function addPoint(ability, player, agent) {
         for (let i = 0; i < ability.length; i++) {

@@ -1,9 +1,9 @@
 * {
     zoom: 98.5%;
-    margin: 0px;
-    padding: 2px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: none;
+    margin: 0px;
+    padding: 2px;
 }
 
 body {
@@ -12,35 +12,19 @@ body {
     background-color: #000000;
 }
 
-/* LOG-IN */
+/* GUEST-MODE */
+
 header {
     display: none;
-    background-color: #414141;
-    color: rgb(148, 148, 148);
-    width: 100%;
     justify-content: space-evenly;
+    background-color: #414141;
+    color: #949494;
+    width: 100%;
 }
 
+/* NAV*/
 
-a:visited {
-    color: #db7474;
-}
-
-.guest {
-    color: rgb(161, 160, 160);
-}
-.guest:visited {
-    color: rgb(161, 160, 160);
-}
-
-.fas {
-    color: white;
-    align-self: flex-end;
-}
-
-a {
-    color: #db7474;
-}
+/* LOG-IN - REGISTER */
 
 .login, .signin {
     display: flex;
@@ -60,15 +44,40 @@ a {
     padding-top: 30px;
     padding-bottom: 20px;
 }
+
+a:visited {
+    color: #db7474;
+}
+
+.guest {
+    color: #a1a0a0;
+}
+
+.guest:visited {
+    color: #a1a0a0;
+}
+
+.fas {
+    color: white;
+    align-self: flex-end;
+}
+
+a {
+    color: #db7474;
+}
+
 label {
     margin-top: 10px;
 }
+
 [type="text"] {
     margin-left: 34.5px;
 }
+
 [type="email"] {
     margin-left: 28.5px;
 }
+
 [type="submit"] {
     width: 100px;
     margin: auto;
@@ -82,8 +91,6 @@ label {
     height: 280px;
     justify-content: center;
 }
-
-
 
 select {
     height: 25px;
@@ -113,7 +120,7 @@ aside section {
 }
 
 .teamE {
-   text-align: right;
+    text-align: right;
 }
 
 [for="player1"] {
@@ -323,13 +330,13 @@ p {
     justify-content: flex-start;
 }
 
-
 footer {
     color: white;
     text-align: right;
     font-style: oblique;
     font-size: smaller;
 }
+
 /* MEDIA QUERY */
 
 @media screen and (max-width: 640px) {
@@ -351,5 +358,4 @@ footer {
     [type="text"] {
         margin-left: 28.5px;
     }
-    
 }
