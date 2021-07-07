@@ -1,6 +1,12 @@
 <?php
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
+
+session_start();
+if ($_SESSION['user_valid']!== true){
+    header('Location:index.php');
+    die();
+}
 ?>
 
 <!DOCTYPE html>
@@ -307,3 +313,4 @@ error_reporting(E_ALL);
     <footer><p>by Volkova.</p></footer>
 </body>
 </html>
+ 
