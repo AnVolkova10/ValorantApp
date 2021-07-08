@@ -31,8 +31,9 @@ if ($api_response !== false) {
         echo '</ul>';
     } 
 }
-var_dump($agents);
 die();
+var_dump($agents);
+
 
 
 

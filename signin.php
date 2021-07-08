@@ -52,9 +52,9 @@ if ($user !== '' && $password !== '' && $email !== '' && $source !== '') {
         ("' . $connection->real_escape_string($user) . '", "' . $connection->real_escape_string($password) . '", "' . $connection->real_escape_string($tagline) . '", "' . $connection->real_escape_string($email) . '", "' . $connection->real_escape_string($source) . '", "' . $connection->real_escape_string($comments) . '") ');
 
     if ($result) {
-        echo 'todo bien';
+        
     } else {
-        echo 'todo mal';
+        echo 'todo mal, no se pudo registrar el usuarie.';
     }
 
 } else {

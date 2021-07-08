@@ -20,7 +20,7 @@ if ($_SESSION['user_valid']!== true){
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/7e0b075d33.js" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
     <?php require_once 'nav.php';        ?>
