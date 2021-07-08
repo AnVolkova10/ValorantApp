@@ -1,4 +1,4 @@
-window.onload = () => {
+document.addEventListener("DOMContentLoaded", function () {
     
     //LOG IN - REGISTER LOGIC /////////////////////////////////////////////////
     let guest = document.querySelector(".guest");
@@ -59,16 +59,16 @@ window.onload = () => {
     let detainE = document.querySelectorAll(".detainE");
 
     // Player's color
-    let colorP1 = "blue";
-    let colorP2 = "red";
-    let colorP3 = "green";
-    let colorP4 = "yellow";
-    let colorP5 = "pink";
-    let colorP6 = "lightblue";
-    let colorP7 = "lightcoral";
-    let colorP8 = "lightgreen";
-    let colorP9 = "khaki";
-    let colorP10 = "lightpink";
+    let colorP1 = "darkred";
+    let colorP2 = "indianred";
+    let colorP3 = "goldenrod";
+    let colorP4 = "darkgreen";
+    let colorP5 = "mediumblue";
+    let colorP6 = "coral";
+    let colorP7 = "lightpink";
+    let colorP8 = "darkkhaki";
+    let colorP9 = "darkolivegreen";
+    let colorP10 = "slateblue";
 
     // Classes              add atribute: country/region
     class Agent {
@@ -507,12 +507,12 @@ window.onload = () => {
             let point = document.createElement("div");
             ability[i].appendChild(point);
             point.style.backgroundColor = agent.color;
-            point.style.borderBottomColor = player;
+            point.style.borderTopColor = player;
             point.className = player;
         } 
     }
 
-    // WORK IN PROGRESS W I P
+    //  W I P
     function enableOption () {
         let enable = document.querySelectorAll('["value="'+agent.variable+'"]');
         enable.style.display = "block";
@@ -520,6 +520,29 @@ window.onload = () => {
     function disableOption () {
         let disable = document.querySelectorAll('["value="'+agent.variable+'"]');
         disable.style.display = "none";
+    }
+    
+    function classesSelection() {
+        let controller = document.querySelectorAll(".controller");
+        let sentinel = document.querySelectorAll(".sentinel");
+        let duelist = document.querySelectorAll(".duelist");
+        let initiator = document.querySelectorAll(".iniator");
+        
+        if (controller.length === 1) {
+            console.log("Controllers check!");
+        } else {
+            console.log("Falta 1 Controller");
+        }
+        if (duelist.length === 0) {
+            console.log("Falta 1 o 2 duelista/s!");
+        } else if (duelist.length === 2) {
+            console.log("Duelista/s check!");
+        } else if (duelist.length === 1 && initiator === 2) {
+            console.log("Duelista check!");
+        }
+        
+
+
     }
 
     // Agent Selection
@@ -657,30 +680,6 @@ window.onload = () => {
 
     }
 
-    // CLasses Selection W I P
-    function classesSelection() {
-        let controller = document.querySelectorAll(".controller");
-        let sentinel = document.querySelectorAll(".sentinel");
-        let duelist = document.querySelectorAll(".duelist");
-        let initiator = document.querySelectorAll(".iniator");
-        
-        if (controller.length === 1) {
-            console.log("Controllers check!");
-        } else {
-            console.log("Falta 1 Controller");
-        }
-        if (duelist.length === 0) {
-            console.log("Falta 1 o 2 duelista/s!");
-        } else if (duelist.length === 2) {
-            console.log("Duelista/s check!");
-        } else if (duelist.length === 1 && initiator === 2) {
-            console.log("Duelista check!");
-        }
-        
-
-
-    }
-
     //Player selects an Agent, adds certain points to abilities
     let paraClases = ".";
 
@@ -690,7 +689,6 @@ window.onload = () => {
         let option1 = this.options[this.selectedIndex].value;
         agentSelection(option1, agent1, colorP1);
         classesSelection();
-        
     });
 
     let agent2 = document.querySelector("#agent2");
@@ -783,4 +781,4 @@ window.onload = () => {
         }
         
     })
-}
+});

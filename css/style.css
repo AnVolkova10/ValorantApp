@@ -138,43 +138,45 @@ aside section {
 }
 
 [for="player1"] {
-    background-color: #1d1dcc;
+    background-color: darkred;
 }
 
 [for="player2"] {
-    background-color: #b61616;
+    
+    background-color: indianred;
 }
 
 [for="player3"] {
-    background-color: #055a05;
+    background-color:goldenrod;
 }
 
 [for="player4"] {
-    background-color: #d6a916;
+    background-color:darkgreen;
+    
 }
 
 [for="player5"] {
-    background-color: #b33348;
+    background-color:mediumblue;
 }
 
 [for="player6"] {
-    background-color: #7285da;
+    background-color:coral;
 }
 
 [for="player7"] {
-    background-color: #ac4949;
+    background-color: lightpink;
 }
 
 [for="player8"] {
-    background-color: #415f44;
+    background-color:darkkhaki;
 }
 
 [for="player9"] {
-    background-color: #a8a858;
+    background-color:darkolivegreen;
 }
 
 [for="player10"] {
-    background-color: lightpink;
+    background-color:slateblue;
 }
 
 .astra {
@@ -320,7 +322,7 @@ div {
     border-radius: 10px;
     margin: 0.5px;
     border: solid 0.1px grey;
-    border-bottom: solid 7px;
+    border-top: solid 7px;
 }
 
 p {
@@ -354,6 +356,9 @@ footer {
 /* MEDIA QUERY */
 
 @media screen and (max-width: 640px) {
+    * {
+        zoom: 96%;
+    }
     body {
         font-size: smaller;
     }
@@ -368,6 +373,7 @@ footer {
     div {
         height: 5px;
         width: 5px;
+        border-top: solid 3px;
     }
     [type="text"] {
         margin-left: 28.5px;
