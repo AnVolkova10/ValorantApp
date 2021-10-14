@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALORANT TEAM-STRATEGY</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/7e0b075d33.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</head>
+<body class="signin">
+	<a href="index.html" class="fas"><i class="fas fa-times-circle"></i></a>
+	<h1>Register</h1>
+	<form action="signin.php" method="post">
+		<label>User
+			<input type="text" name="user" placeholder="User de Valorant" required>
+		</label>
+		<label>Tagline
+			<input type="text" name="tagline" placeholder="#LAS, #3489, etc" required>
+		</label>
+
+		<label>Password
+			<input type="password" name="password" placeholder="4-10 characters A-Z, 0-9" required>
+		</label>
+		<label>Repeat it!
+			<input type="password" name="re-password" placeholder="repeat" required>
+		</label>
+
+		<label>Email
+			<input type="email" name="email" placeholder="x@x.com" required>
+		</label>
+
+		<label>How did you meet us?
+			<select name="source" required>
+				<option value="friend">I'm a friend</option>
+				<option value="social-network">Social-Network</option>
+				<option value="github">Github</option>
+				<option value="other">Other</option>
+			</select>
+		</label>
+		<label>Leave us comments about the app porfi
+			<textarea name="comments" placeholder="Thank you!"></textarea>
+		</label>
+		<button type="submit">Create Account</button>
+	</form>
+</body>
+</html>
